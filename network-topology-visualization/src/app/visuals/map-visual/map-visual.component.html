@@ -1,0 +1,16 @@
+<agm-map
+  [style.width.px]="width"
+  [style.height.px]="height"
+  [latitude]="initLat"
+  [longitude]="initLng"
+  [zoom]="zoom"
+  [styles]="mapStyles">
+  <map-node-visual
+    *ngFor="let node of nodes"
+    [node]="node">
+  </map-node-visual>
+  <map-link-visual
+    *ngFor="let link of links"
+    [link]="link">
+  </map-link-visual>
+</agm-map>

@@ -1,0 +1,646 @@
+<!doctype html>
+<html class="default no-js">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>force-directed-graph</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+<header>
+	<div class="tsd-page-toolbar">
+		<div class="container">
+			<div class="table-wrap">
+				<div class="table-cell" id="tsd-search" data-index="assets/js/search.js" data-base=".">
+					<div class="field">
+						<label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
+						<input id="tsd-search-field" type="text" />
+					</div>
+					<ul class="results">
+						<li class="state loading">Preparing search index...</li>
+						<li class="state failure">The search index is not available</li>
+					</ul>
+					<a href="index.html" class="title">force-directed-graph</a>
+				</div>
+				<div class="table-cell" id="tsd-widgets">
+					<div id="tsd-filter">
+						<a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a>
+						<div class="tsd-filter-group">
+							<div class="tsd-select" id="tsd-filter-visibility">
+								<span class="tsd-select-label">All</span>
+								<ul class="tsd-select-list">
+									<li data-value="public">Public</li>
+									<li data-value="protected">Public/Protected</li>
+									<li data-value="private" class="selected">All</li>
+								</ul>
+							</div>
+							<input type="checkbox" id="tsd-filter-inherited" checked />
+							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
+							<input type="checkbox" id="tsd-filter-externals" checked />
+							<label class="tsd-widget" for="tsd-filter-externals">Externals</label>
+							<input type="checkbox" id="tsd-filter-only-exported" />
+							<label class="tsd-widget" for="tsd-filter-only-exported">Only exported</label>
+						</div>
+					</div>
+					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="tsd-page-title">
+		<div class="container">
+			<ul class="tsd-breadcrumb">
+				<li>
+					<a href="globals.html">Globals</a>
+				</li>
+			</ul>
+			<h1> force-directed-graph</h1>
+		</div>
+	</div>
+</header>
+<div class="container container-main">
+	<div class="row">
+		<div class="col-8 col-content">
+			<div class="tsd-panel tsd-typography">
+				<h1 id="topology-visualization">Topology visualization</h1>
+				<p>This application is an implementation part of the bachelor thesis <code>Network Topology Visualization in Angular Framework</code>.
+				Author of the thesis is Martin Hamerník (contact him at <a href="mailto:445720@mail.muni.cz">445720@mail.muni.cz</a>).</p>
+				<p>The application is a frontend visualization of a network topology in form of a graph and map written in Angular.</p>
+				<h2 id="prerequisites">Prerequisites</h2>
+				<p>To run the application you need to have following tools installed.</p>
+				<ul>
+					<li><a href="https://nodejs.org/en/">Node.js</a> version 8.x or higher</li>
+					<li><a href="https://www.npmjs.com/">NPM</a> version 5.x or higher</li>
+					<li><a href="https://github.com/angular/angular-cli">Angular CLI</a> - run <code>npm install -g @angular/cli</code></li>
+				</ul>
+				<p>For detailed guide, follow <a href="https://angular.io/guide/quickstart">Angular quickstart</a></p>
+				<p>Other libraries and dependencies will be installed by running <code>npm install</code> in the root folder of the application.</p>
+				<h2 id="structure-of-the-application">Structure of the application</h2>
+				<p>The project follows standard structure of an Angular application.
+					To learn more about the structure of Angular applications,
+				consult the theoretical part of this thesis or <a href="https://angular.io/guide/quickstart#project-file-review">project file review</a>.</p>
+				<h5 id="source-code">Source code</h5>
+				<p>The source code of the application itself (inside the <code>app</code> folder) follows the structure below.</p>
+				<ul>
+					<li><strong>directives</strong> - all directves are placed here.</li>
+					<li><strong>graph</strong> - all core components of the graph page (sidebar, menus) are located here.</li>
+					<li><strong>map-overlay</strong> - all core components of the map page are located here.</li>
+					<li><strong>model</strong> -data model and enum classes of the application are located here.</li>
+					<li><strong>others</strong> - util classes.</li>
+					<li><strong>services</strong> - all services are placed here.</li>
+					<li><strong>testing</strong> - util classes for testing.</li>
+					<li><strong>visuals</strong> - visual components of graph and map components are located here.</li>
+				</ul>
+				<h4 id="modules">Modules</h4>
+				<p>Application&#39;s feature modules are lazily-loaded when they are needed.</p>
+				<p><strong>Core modules</strong></p>
+				<ul>
+					<li>app-routing.module.ts</li>
+					<li>app.module.ts</li>
+				</ul>
+				<p><strong>Feature modules</strong></p>
+				<ul>
+					<li>graph-routing.module.ts</li>
+					<li>graph-material.module.ts</li>
+					<li><p>graph.module.ts</p>
+						<ul>
+							<li>graph-visual-components.module.ts<ul>
+									<li>directives.module.ts</li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+					<li><p>map-routing.module.ts</p>
+					</li>
+					<li>map.module.ts<ul>
+							<li>map-visual-components.module.ts</li>
+						</ul>
+					</li>
+				</ul>
+				<h4 id="tests">Tests</h4>
+				<p>All test files are recognized by having <code>.spec</code> extension.</p>
+				<h6 id="unit-tests">Unit tests</h6>
+				<p>Unit tests are placed in the same folder as each component (as it is recommended by the Angular guidelines)
+				with the exception of tests for services, which are placed in the <code>src/app/services/tests/</code> folder.</p>
+				<h6 id="e2e-tests">E2E tests</h6>
+				<p>E2E tests are placed in the <code>e2e</code> folder.</p>
+				<h2 id="running-unit-tests">Running unit tests</h2>
+				<p>Run <code>ng test</code> to execute the unit tests via <a href="https://karma-runner.github.io">Karma</a>.</p>
+				<h2 id="running-end-to-end-tests">Running end-to-end tests</h2>
+				<p>Run <code>ng e2e</code> to execute the end-to-end tests via <a href="http://www.protractortest.org/">Protractor</a>.</p>
+				<h2 id="running-the-application-on-a-development-server">Running the application on a development server</h2>
+				<p>Run <code>ng serve</code> in the root folder of the application for a dev server. Navigate to <code>http://localhost:4200/</code>. The app will automatically reload if you change any of the source files.</p>
+				<p>The development server uses test JSON files to load data for topology, map, and decorators. JSON files are located in the assets folder.
+				Feel free to modify and add your own test files. </p>
+				<p>Test data of decorators are meant to demonstrate all possible options of decorators.
+				If the visualization feels congested with all the active decorators, use decorator filters or disable them completely in the sidebar menu.</p>
+				<p>Even though the decorators are powered by test data which does not change in time, POST request bodies to REST API are still created and logged into the console.
+				You may test using absolute and relative time by observing logs in the browser&#39;s console.</p>
+				<p>To test a multi-leveled topology, change the value of attribute  <code>topologyRestUrl</code> to <code>/assets/recursive_graph_test_data.json&#39;</code>.
+				To return to the original topology, change the value back to  <code>/assets/graph_test_data.json</code></p>
+				<p>If you wish to change any of the attached test data or link your own, please place them in the assets folder and change the attributes in environment.ts accordingly.</p>
+				<h2 id="running-the-application-on-a-production-server">Running the application on a production server</h2>
+				<p>The production version uses REST API to load data for topology and decorators (map is not supported) from a server.
+				If you wish to test the application in cooperation with other KYPO projects, please follow the steps below.</p>
+				<h4 id="prerequisites">Prerequisites</h4>
+				<ul>
+					<li><a href="http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html">JDK 1.8</a> or higher</li>
+					<li><a href="https://tomcat.apache.org/download-70.cgi">Tomcat7</a></li>
+					<li><a href="https://maven.apache.org/">Maven</a></li>
+					<li><a href="https://git-scm.com/">Git</a></li>
+					<li><a href="https://www.postgresql.org/">PostgreSQL</a></li>
+					<li><a href="https://www.elastic.co/downloads/past-releases">Kibana 5.5.0</a></li>
+					<li><a href="https://www.elastic.co/downloads/past-releases/elasticsearch-5-5-0">Elasticsearch 5.5.0</a></li>
+				</ul>
+				<h4 id="kypo-projects">KYPO Projects</h4>
+				<p>Clone following projects</p>
+				<ul>
+					<li><strong>kypo2-service-sandbox</strong> - <code>git clone https://gitlab.ics.muni.cz/kypo2/services-and-portlets/kypo2-service-sandbox.git</code></li>
+					<li><strong>kypo2-service-kypo-management</strong> - <code>git clone https://gitlab.ics.muni.cz/kypo2/services-and-portlets/kypo2-service-kypo-management.git</code></li>
+					<li><strong>kypo2-db-model</strong> - <code>git clone https://gitlab.ics.muni.cz/kypo2/services-and-portlets/kypo2-db-model</code></li>
+					<li><strong>kypo2-rest-commons</strong> - <code>git clone https://gitlab.ics.muni.cz/kypo2/services-and-portlets/kypo2-rest-commons</code></li>
+					<li><strong>kypo2-audit-service</strong> - <code>git clone https://gitlab.ics.muni.cz/kypo2/services-and-portlets/kypo2-audit-service</code></li>
+					<li><strong>kypo2-rest-sandbox</strong> - <code>git clone https://gitlab.ics.muni.cz/kypo2/services-and-portlets/kypo2-rest-sandbox</code></li>
+				</ul>
+				<p>The projects are changing over time, to ensure compatibility with the frontend. Checkout following commits.</p>
+				<ul>
+					<li>in <strong>kypo2-rest-sandbox</strong> <code>git checkout b0e35b199c3f2390695e6bce8b9813885b6d5234 .</code></li>
+					<li>in <strong>kypo2-service-sandbox</strong> <code>git checkout 9f0d5a434435d05a71b8bade3a21751790d723de .</code></li>
+				</ul>
+				<p>Install projects with <code>mvn clean install</code> in following order.</p>
+				<ol>
+					<li><strong>kypo2-db-model</strong></li>
+					<li><strong>kypo2-service-kypo-management</strong></li>
+					<li><strong>kypo2-rest-commons</strong></li>
+					<li><strong>kypo2-service-sandbox</strong></li>
+					<li><strong>kypo2-audit-service</strong></li>
+					<li><strong>kypo2-rest-sandbox</strong></li>
+				</ol>
+				<h4 id="test-data">Test data</h4>
+				<p>Create local database <code>dbmodel</code> and <code>kypodb</code> in PostgreSQL. Scripts to create schemas and fill them with data are located in
+				<code>resources/testData</code> in <strong>kypo2-service-sandbox</strong> project.</p>
+				<p>Create config file. Example is located in  <code>resources/database.properties</code> in <strong>kypo2-service-sandbox</strong> project.</p>
+				<p>Run Elasticsearch (<code>/elasticsearch-5.5.0/bin/elasticsearch</code>) and Kibana (<code>kibana-5.5.0/bin/kibana</code>).</p>
+				<p>Navigate to <code>http://localhost:5601/app/kibana</code>  and open the Dev Tools window in left toolbar.
+				You can insert queries to database storing measurements in the network (decorators). Note that only speed decorators are currently available.</p>
+				<h6 id="example-queries">Example queries</h6>
+				<p>  <strong>GET</strong> whole database
+				<code>GET kypo2-cz.muni.csirt.kypo.measurements*/_search</code></p>
+				<p>  <strong>DELETE</strong> whole database
+				<code>DELETE kypo2-cz.muni.csirt.kypo.measurements*</code></p>
+				<p>  <strong>DELETE</strong> entry by match query (change the name of the interface accordingly to your data)</p>
+				<pre><code>POST kypo2-cz<span class="hljs-selector-class">.muni</span><span class="hljs-selector-class">.csirt</span><span class="hljs-selector-class">.kypo</span><span class="hljs-selector-class">.measurements</span>*/_delete_by_query
+ {
+   <span class="hljs-string">"query"</span>: { 
+     <span class="hljs-string">"match"</span>: {
+       <span class="hljs-string">"interface"</span>: <span class="hljs-string">"Pc1"</span>
+     }
+   }
+ }
+</code></pre><p>   <strong>INSERT</strong> one entry of received data on network node. Change the data to match the address and interfaces inside you local PostgreSQL DB.
+				Timestamp is UNIX epoch time in millis. Use absolute or relative time picker in the topology visualization to display the data.</p>
+				<pre><code> POST kypo2-cz<span class="hljs-selector-class">.muni</span><span class="hljs-selector-class">.csirt</span><span class="hljs-selector-class">.kypo</span><span class="hljs-selector-class">.measurements</span><span class="hljs-selector-class">.numberofbytesreceived</span>/cz<span class="hljs-selector-class">.muni</span><span class="hljs-selector-class">.csirt</span><span class="hljs-selector-class">.kypo</span><span class="hljs-selector-class">.measurements</span><span class="hljs-selector-class">.NumberOfBytesReceived</span>
+ {
+   <span class="hljs-string">"type"</span> : <span class="hljs-string">"cz.muni.csirt.kypo.measurements.NumberOfBytesReceived"</span>,
+   <span class="hljs-string">"timestamp"</span>: <span class="hljs-number">1523366703000</span>,
+   <span class="hljs-string">"ip_address"</span>:<span class="hljs-string">"150.150.2.1"</span>,
+   <span class="hljs-string">"interface"</span>: <span class="hljs-string">"Pc1"</span>,
+   <span class="hljs-string">"value"</span> : <span class="hljs-number">500</span>
+ }
+</code></pre><p>  <strong>INSERT</strong> one entry of transmitted data on network node. Change the data to match the address and interfaces inside you local PostgreSQL DB.
+				Timestamp is UNIX epoch time in millis. Use absolute or relative time picker in the topology visualization to display the data.</p>
+				<pre><code>POST kypo2-cz<span class="hljs-selector-class">.muni</span><span class="hljs-selector-class">.csirt</span><span class="hljs-selector-class">.kypo</span><span class="hljs-selector-class">.measurements</span><span class="hljs-selector-class">.numberofbytestransmitted</span>/cz<span class="hljs-selector-class">.muni</span><span class="hljs-selector-class">.csirt</span><span class="hljs-selector-class">.kypo</span><span class="hljs-selector-class">.measurements</span><span class="hljs-selector-class">.NumberOfBytesTransmitted</span>
+ {
+   <span class="hljs-string">"type"</span> : <span class="hljs-string">"cz.muni.csirt.kypo.measurements.NumberOfBytesTransmitted"</span>,
+   <span class="hljs-string">"timestamp"</span>: <span class="hljs-number">1523367345000</span>,
+   <span class="hljs-string">"ip_address"</span>:<span class="hljs-string">"150.150.2.1"</span>,
+   <span class="hljs-string">"interface"</span>: <span class="hljs-string">"Pc1"</span>,
+   <span class="hljs-string">"value"</span> : <span class="hljs-number">1000</span>
+ }
+</code></pre><h4 id="running-the-rest-api">Running the REST API</h4>
+				<p>Run the REST API for topology and decorators by <code>mvn tomcat7:run -Dpath.to.db.config.file=/etc/kypo2_config.properties</code>
+					Change the path to the config file to match your file structure.
+				You can test if the REST API is running by GET request to following address <code>http://localhost:8080/kypo2-rest-sandbox/api/v1/sandbox1/topology</code></p>
+				<h4 id="running-the-topology-visualization">Running the topology visualization</h4>
+				<p>Run <code>ng serve --env=prod</code> in the root folder of the application for a prod server. Navigate to <code>http://localhost:4200/</code>. The app will automatically reload if you change any of the source files.</p>
+				<p><strong>Note:</strong> Most of the browsers block <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS">Cross-Origin Resource Sharing</a> due to security reasons.
+					To run the application without problems use browser plugin (<a href="https://chrome.google.com/webstore/detail/cors-toggle/jioikioepegflmdnbocfhgmpmopmjkim">CORS Toggle</a> for example)
+				or run the browser with disabled security features (You may need to kill all Chrome processes to run properly).</p>
+				<ul>
+					<li>Windows: <code>chrome.exe --user-data-dir=&quot;C:/Chrome dev session&quot; --disable-web-security</code></li>
+					<li>Linux: <code>google-chrome --disable-web-security --user-data-dir</code></li>
+				</ul>
+				<p>Similar alternatives are available for Mozilla Firefox.</p>
+				<h2 id="documentation">Documentation</h2>
+				<p>Documentation generated by <a href="http://typedoc.org/guides/installation/">TypeDoc</a> is located in folder <code>documentation</code> in
+				the root folder of the application.</p>
+				<h2 id="further-help">Further help</h2>
+				<p>If any of the previous steps are unclear to you or you are experiencing any trouble with the application or its setup don&#39;t hesitate to
+				contact the author at <a href="mailto:445720@mail.muni.cz">445720@mail.muni.cz</a>.</p>
+			</div>
+		</div>
+		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
+			<nav class="tsd-navigation primary">
+				<ul>
+					<li class="globals  ">
+						<a href="globals.html"><em>Globals</em></a>
+					</li>
+					<li class="label tsd-is-external">
+						<span>Internals</span>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_app_app_routing_module_.html">"app/app-<wbr>routing.module"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_app_app_component_.html">"app/app.component"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_app_app_module_.html">"app/app.module"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_app_directives_context_menu_directive_.html">"app/directives/context-<wbr>menu.directive"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_app_directives_directives_module_.html">"app/directives/directives.module"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_app_directives_draggable_directive_.html">"app/directives/draggable.directive"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_app_directives_zoomable_directive_.html">"app/directives/zoomable.directive"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_app_graph_force_graph_sidebar_decorator_filter_menu_category_checkbox_model_.html">"app/graph/force-<wbr>graph-<wbr>sidebar/decorator-<wbr>filter-<wbr>menu/category-<wbr>checkbox-<wbr>model"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_app_graph_force_graph_sidebar_decorator_filter_menu_decorator_checkbox_model_.html">"app/graph/force-<wbr>graph-<wbr>sidebar/decorator-<wbr>filter-<wbr>menu/decorator-<wbr>checkbox-<wbr>model"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_app_graph_force_graph_sidebar_decorator_filter_menu_decorator_filter_menu_component_.html">"app/graph/force-<wbr>graph-<wbr>sidebar/decorator-<wbr>filter-<wbr>menu/decorator-<wbr>filter-<wbr>menu.component"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_app_graph_force_graph_sidebar_decorator_time_picker_absolute_time_absolute_time_component_.html">"app/graph/force-<wbr>graph-<wbr>sidebar/decorator-<wbr>time-<wbr>picker/absolute-<wbr>time/absolute-<wbr>time.component"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_app_graph_force_graph_sidebar_decorator_time_picker_absolute_time_absolute_time_component_spec_.html">"app/graph/force-<wbr>graph-<wbr>sidebar/decorator-<wbr>time-<wbr>picker/absolute-<wbr>time/absolute-<wbr>time.component.spec"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_app_graph_force_graph_sidebar_decorator_time_picker_decorator_time_picker_component_.html">"app/graph/force-<wbr>graph-<wbr>sidebar/decorator-<wbr>time-<wbr>picker/decorator-<wbr>time-<wbr>picker.component"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_app_graph_force_graph_sidebar_decorator_time_picker_relative_time_relative_time_option_.html">"app/graph/force-<wbr>graph-<wbr>sidebar/decorator-<wbr>time-<wbr>picker/relative-<wbr>time/relative-<wbr>time-<wbr>option"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_app_graph_force_graph_sidebar_decorator_time_picker_relative_time_relative_time_component_.html">"app/graph/force-<wbr>graph-<wbr>sidebar/decorator-<wbr>time-<wbr>picker/relative-<wbr>time/relative-<wbr>time.component"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_app_graph_force_graph_sidebar_decorator_time_picker_relative_time_relative_time_component_spec_.html">"app/graph/force-<wbr>graph-<wbr>sidebar/decorator-<wbr>time-<wbr>picker/relative-<wbr>time/relative-<wbr>time.component.spec"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_app_graph_force_graph_sidebar_decorator_timer_decorator_timer_component_.html">"app/graph/force-<wbr>graph-<wbr>sidebar/decorator-<wbr>timer/decorator-<wbr>timer.component"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_app_graph_force_graph_sidebar_force_graph_sidebar_component_.html">"app/graph/force-<wbr>graph-<wbr>sidebar/force-<wbr>graph-<wbr>sidebar.component"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_app_graph_force_graph_sidebar_layout_tab_layout_tab_component_.html">"app/graph/force-<wbr>graph-<wbr>sidebar/layout-<wbr>tab/layout-<wbr>tab.component"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_app_graph_force_graph_component_.html">"app/graph/force-<wbr>graph.component"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_app_graph_graph_material_module_.html">"app/graph/graph-<wbr>material.module"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_app_graph_graph_routing_module_.html">"app/graph/graph-<wbr>routing.module"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_app_graph_graph_module_.html">"app/graph/graph.module"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_app_map_overlay_map_overlay_component_.html">"app/map-<wbr>overlay/map-<wbr>overlay.component"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_app_map_overlay_map_routing_module_.html">"app/map-<wbr>overlay/map-<wbr>routing.module"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_app_map_overlay_map_module_.html">"app/map-<wbr>overlay/map.module"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_app_model_decorators_link_decorator_.html">"app/model/decorators/link-<wbr>decorator"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_app_model_decorators_link_mail_decorator_.html">"app/model/decorators/link-<wbr>mail-<wbr>decorator"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_app_model_decorators_link_speed_decorator_.html">"app/model/decorators/link-<wbr>speed-<wbr>decorator"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_app_model_decorators_node_decorator_.html">"app/model/decorators/node-<wbr>decorator"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_app_model_decorators_node_host_decorator_.html">"app/model/decorators/node-<wbr>host-<wbr>decorator"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_app_model_decorators_node_logical_role_decorator_.html">"app/model/decorators/node-<wbr>logical-<wbr>role-<wbr>decorator"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_app_model_decorators_node_router_decorator_.html">"app/model/decorators/node-<wbr>router-<wbr>decorator"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_app_model_decorators_node_semaphore_decorator_.html">"app/model/decorators/node-<wbr>semaphore-<wbr>decorator"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_app_model_decorators_node_status_decorator_.html">"app/model/decorators/node-<wbr>status-<wbr>decorator"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_app_model_enums_decorator_category_enum_.html">"app/model/enums/decorator-<wbr>category-<wbr>enum"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_app_model_enums_decorator_event_message_enum_.html">"app/model/enums/decorator-<wbr>event-<wbr>message-<wbr>enum"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_app_model_enums_graph_event_type_enum_.html">"app/model/enums/graph-<wbr>event-<wbr>type-<wbr>enum"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_app_model_enums_graph_layouts_enum_.html">"app/model/enums/graph-<wbr>layouts-<wbr>enum"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_app_model_enums_host_node_decorator_type_enum_.html">"app/model/enums/host-<wbr>node-<wbr>decorator-<wbr>type-<wbr>enum"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_app_model_enums_link_decorator_speed_enum_.html">"app/model/enums/link-<wbr>decorator-<wbr>speed-<wbr>enum"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_app_model_enums_link_decorator_type_enum_.html">"app/model/enums/link-<wbr>decorator-<wbr>type-<wbr>enum"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_app_model_enums_link_type_enum_.html">"app/model/enums/link-<wbr>type-<wbr>enum"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_app_model_enums_node_context_menu_items_enum_.html">"app/model/enums/node-<wbr>context-<wbr>menu-<wbr>items-<wbr>enum"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_app_model_enums_node_logical_role_enum_.html">"app/model/enums/node-<wbr>logical-<wbr>role-<wbr>enum"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_app_model_enums_node_physical_role_enum_.html">"app/model/enums/node-<wbr>physical-<wbr>role-<wbr>enum"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_app_model_enums_node_semaphore_decorator_status_enum_.html">"app/model/enums/node-<wbr>semaphore-<wbr>decorator-<wbr>status-<wbr>enum"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_app_model_enums_router_node_decorator_type_enum_.html">"app/model/enums/router-<wbr>node-<wbr>decorator-<wbr>type-<wbr>enum"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_app_model_enums_status_enum_.html">"app/model/enums/status-<wbr>enum"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_app_model_enums_time_algebra_operator_enum_.html">"app/model/enums/time-<wbr>algebra-<wbr>operator-<wbr>enum"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_app_model_enums_time_unit_enum_.html">"app/model/enums/time-<wbr>unit-<wbr>enum"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_app_model_events_decorator_reload_request_event_.html">"app/model/events/decorator-<wbr>reload-<wbr>request-<wbr>event"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_app_model_events_graph_event_.html">"app/model/events/graph-<wbr>event"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_app_model_events_link_decorator_change_event_.html">"app/model/events/link-<wbr>decorator-<wbr>change-<wbr>event"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_app_model_events_node_decorator_change_event_.html">"app/model/events/node-<wbr>decorator-<wbr>change-<wbr>event"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_app_model_graph_force_directed_graph_.html">"app/model/graph/force-<wbr>directed-<wbr>graph"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_app_model_graph_layout_creators_hierarchical_layout_creator_.html">"app/model/graph/layout-<wbr>creators/hierarchical-<wbr>layout-<wbr>creator"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_app_model_link_link_.html">"app/model/link/link"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_app_model_map_google_map_.html">"app/model/map/google-<wbr>map"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_app_model_node_geo_host_node_.html">"app/model/node/geo-<wbr>host-<wbr>node"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_app_model_node_geo_node_.html">"app/model/node/geo-<wbr>node"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_app_model_node_geo_router_node_.html">"app/model/node/geo-<wbr>router-<wbr>node"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_app_model_node_host_node_.html">"app/model/node/host-<wbr>node"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_app_model_node_igeo_node_.html">"app/model/node/igeo-<wbr>node"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_app_model_node_inode_.html">"app/model/node/inode"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_app_model_node_node_.html">"app/model/node/node"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_app_model_node_router_node_.html">"app/model/node/router-<wbr>node"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_app_model_others_decorator_http_post_body_.html">"app/model/others/decorator-<wbr>http-<wbr>post-<wbr>body"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_app_model_others_geo_.html">"app/model/others/geo"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_app_model_others_point_.html">"app/model/others/point"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_app_others_enum_to_string_converter_.html">"app/others/enum-<wbr>to-<wbr>string-<wbr>converter"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_app_others_router_nav_link_.html">"app/others/router-<wbr>nav-<wbr>link"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_app_others_router_nav_links_.html">"app/others/router-<wbr>nav-<wbr>links"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_app_others_string_to_enum_converter_.html">"app/others/string-<wbr>to-<wbr>enum-<wbr>converter"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_app_services_context_menu_service_.html">"app/services/context-<wbr>menu.service"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_app_services_d3_zoom_event_service_.html">"app/services/d3-<wbr>zoom-<wbr>event.service"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_app_services_d3_service_.html">"app/services/d3.service"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_app_services_decorator_event_service_.html">"app/services/decorator-<wbr>event.service"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_app_services_decorator_filter_service_.html">"app/services/decorator-<wbr>filter.service"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_app_services_decorator_loader_service_.html">"app/services/decorator-<wbr>loader.service"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_app_services_decorator_reload_timer_service_.html">"app/services/decorator-<wbr>reload-<wbr>timer.service"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_app_services_decorator_time_service_.html">"app/services/decorator-<wbr>time.service"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_app_services_graph_event_service_.html">"app/services/graph-<wbr>event.service"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_app_services_graph_topology_loader_service_.html">"app/services/graph-<wbr>topology-<wbr>loader.service"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_app_services_map_topology_loader_service_.html">"app/services/map-<wbr>topology-<wbr>loader.service"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_app_services_tests_decorator_filter_service_spec_.html">"app/services/tests/decorator-<wbr>filter.service.spec"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_app_services_tests_decorator_loader_service_spec_.html">"app/services/tests/decorator-<wbr>loader.service.spec"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_app_services_tests_decorator_reload_timer_service_spec_.html">"app/services/tests/decorator-<wbr>reload-<wbr>timer.service.spec"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_app_services_tests_decorator_time_service_spec_.html">"app/services/tests/decorator-<wbr>time.service.spec"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_app_services_tests_graph_topology_loader_service_spec_.html">"app/services/tests/graph-<wbr>topology-<wbr>loader.service.spec"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_app_services_tests_mock_decorator_reload_timer_service_.html">"app/services/tests/mock-<wbr>decorator-<wbr>reload-<wbr>timer.service"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_app_services_tests_mock_decorator_time_service_.html">"app/services/tests/mock-<wbr>decorator-<wbr>time.service"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_app_testing_async_observable_helpers_.html">"app/testing/async-<wbr>observable-<wbr>helpers"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_app_testing_topology_test_jsons_.html">"app/testing/topology-<wbr>test-<wbr>jsons"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_app_visuals_graph_link_visual_graph_link_visual_component_.html">"app/visuals/graph-<wbr>link-<wbr>visual/graph-<wbr>link-<wbr>visual.component"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_app_visuals_graph_node_context_menu_graph_node_context_menu_component_.html">"app/visuals/graph-<wbr>node-<wbr>context-<wbr>menu/graph-<wbr>node-<wbr>context-<wbr>menu.component"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_app_visuals_graph_node_visual_graph_node_visual_decorators_node_visual_semaphore_decorator_node_visual_semaphore_decorator_component_.html">"app/visuals/graph-<wbr>node-<wbr>visual/graph-<wbr>node-<wbr>visual-<wbr>decorators/node-<wbr>visual-<wbr>semaphore-<wbr>decorator/node-<wbr>visual-<wbr>semaphore-<wbr>decorator.component"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_app_visuals_graph_node_visual_graph_node_visual_component_.html">"app/visuals/graph-<wbr>node-<wbr>visual/graph-<wbr>node-<wbr>visual.component"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_app_visuals_graph_visual_components_module_.html">"app/visuals/graph-<wbr>visual-<wbr>components.module"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_app_visuals_graph_visual_graph_visual_component_.html">"app/visuals/graph-<wbr>visual/graph-<wbr>visual.component"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_app_visuals_map_link_visual_map_link_visual_component_.html">"app/visuals/map-<wbr>link-<wbr>visual/map-<wbr>link-<wbr>visual.component"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_app_visuals_map_node_visual_map_node_visual_component_.html">"app/visuals/map-<wbr>node-<wbr>visual/map-<wbr>node-<wbr>visual.component"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_app_visuals_map_visual_components_module_.html">"app/visuals/map-<wbr>visual-<wbr>components.module"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_app_visuals_map_visual_map_visual_component_.html">"app/visuals/map-<wbr>visual/map-<wbr>visual.component"</a>
+					</li>
+					<li class="label tsd-is-external">
+						<span>Externals</span>
+					</li>
+					<li class=" tsd-kind-external-module tsd-is-external">
+						<a href="modules/_environments_environment_.html">"environments/environment"</a>
+					</li>
+				</ul>
+			</nav>
+			<nav class="tsd-navigation secondary menu-sticky">
+				<ul class="before-current">
+				</ul>
+			</nav>
+		</div>
+	</div>
+</div>
+<footer class="with-border-bottom">
+	<div class="container">
+		<h2>Legend</h2>
+		<div class="tsd-legend-group">
+			<ul class="tsd-legend">
+				<li class="tsd-kind-module"><span class="tsd-kind-icon">Module</span></li>
+				<li class="tsd-kind-object-literal"><span class="tsd-kind-icon">Object literal</span></li>
+				<li class="tsd-kind-variable"><span class="tsd-kind-icon">Variable</span></li>
+				<li class="tsd-kind-function"><span class="tsd-kind-icon">Function</span></li>
+				<li class="tsd-kind-function tsd-has-type-parameter"><span class="tsd-kind-icon">Function with type parameter</span></li>
+				<li class="tsd-kind-index-signature"><span class="tsd-kind-icon">Index signature</span></li>
+				<li class="tsd-kind-type-alias"><span class="tsd-kind-icon">Type alias</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-enum"><span class="tsd-kind-icon">Enumeration</span></li>
+				<li class="tsd-kind-enum-member"><span class="tsd-kind-icon">Enumeration member</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-enum"><span class="tsd-kind-icon">Property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-enum"><span class="tsd-kind-icon">Method</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-interface"><span class="tsd-kind-icon">Interface</span></li>
+				<li class="tsd-kind-interface tsd-has-type-parameter"><span class="tsd-kind-icon">Interface with type parameter</span></li>
+				<li class="tsd-kind-constructor tsd-parent-kind-interface"><span class="tsd-kind-icon">Constructor</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-interface"><span class="tsd-kind-icon">Property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-interface"><span class="tsd-kind-icon">Method</span></li>
+				<li class="tsd-kind-index-signature tsd-parent-kind-interface"><span class="tsd-kind-icon">Index signature</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-class"><span class="tsd-kind-icon">Class</span></li>
+				<li class="tsd-kind-class tsd-has-type-parameter"><span class="tsd-kind-icon">Class with type parameter</span></li>
+				<li class="tsd-kind-constructor tsd-parent-kind-class"><span class="tsd-kind-icon">Constructor</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-class"><span class="tsd-kind-icon">Property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class"><span class="tsd-kind-icon">Method</span></li>
+				<li class="tsd-kind-accessor tsd-parent-kind-class"><span class="tsd-kind-icon">Accessor</span></li>
+				<li class="tsd-kind-index-signature tsd-parent-kind-class"><span class="tsd-kind-icon">Index signature</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-constructor tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited constructor</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited method</span></li>
+				<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited accessor</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected method</span></li>
+				<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected accessor</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private method</span></li>
+				<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private accessor</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><span class="tsd-kind-icon">Static property</span></li>
+				<li class="tsd-kind-call-signature tsd-parent-kind-class tsd-is-static"><span class="tsd-kind-icon">Static method</span></li>
+			</ul>
+		</div>
+	</div>
+</footer>
+<div class="container tsd-generator">
+	<p>Generated using <a href="http://typedoc.org/" target="_blank">TypeDoc</a></p>
+</div>
+<div class="overlay"></div>
+<script src="assets/js/main.js"></script>
+<script>if (location.protocol == 'file:') document.write('<script src="assets/js/search.js"><' + '/script>');</script>
+</body>
+</html>

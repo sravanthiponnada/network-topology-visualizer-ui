@@ -1,0 +1,1067 @@
+<!doctype html>
+<html class="default no-js">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>DecoratorLoaderService | force-directed-graph</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../assets/css/main.css">
+</head>
+<body>
+<header>
+	<div class="tsd-page-toolbar">
+		<div class="container">
+			<div class="table-wrap">
+				<div class="table-cell" id="tsd-search" data-index="../assets/js/search.js" data-base="..">
+					<div class="field">
+						<label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
+						<input id="tsd-search-field" type="text" />
+					</div>
+					<ul class="results">
+						<li class="state loading">Preparing search index...</li>
+						<li class="state failure">The search index is not available</li>
+					</ul>
+					<a href="../index.html" class="title">force-directed-graph</a>
+				</div>
+				<div class="table-cell" id="tsd-widgets">
+					<div id="tsd-filter">
+						<a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a>
+						<div class="tsd-filter-group">
+							<div class="tsd-select" id="tsd-filter-visibility">
+								<span class="tsd-select-label">All</span>
+								<ul class="tsd-select-list">
+									<li data-value="public">Public</li>
+									<li data-value="protected">Public/Protected</li>
+									<li data-value="private" class="selected">All</li>
+								</ul>
+							</div>
+							<input type="checkbox" id="tsd-filter-inherited" checked />
+							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
+							<input type="checkbox" id="tsd-filter-externals" checked />
+							<label class="tsd-widget" for="tsd-filter-externals">Externals</label>
+							<input type="checkbox" id="tsd-filter-only-exported" />
+							<label class="tsd-widget" for="tsd-filter-only-exported">Only exported</label>
+						</div>
+					</div>
+					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="tsd-page-title">
+		<div class="container">
+			<ul class="tsd-breadcrumb">
+				<li>
+					<a href="../globals.html">Globals</a>
+				</li>
+				<li>
+					<a href="../modules/_app_services_decorator_loader_service_.html">&quot;app/services/decorator-loader.service&quot;</a>
+				</li>
+				<li>
+					<a href="_app_services_decorator_loader_service_.decoratorloaderservice.html">DecoratorLoaderService</a>
+				</li>
+			</ul>
+			<h1>Class DecoratorLoaderService</h1>
+		</div>
+	</div>
+</header>
+<div class="container container-main">
+	<div class="row">
+		<div class="col-8 col-content">
+			<section class="tsd-panel tsd-comment">
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>Service is used for loading decorators from server, creating objects based on received data and passing the decorators to application.
+						Decorators can be filtered. If user doesn&#39;t want to display them there is no need to retrieve them from backend.</p>
+					</div>
+				</div>
+			</section>
+			<section class="tsd-panel tsd-hierarchy">
+				<h3>Hierarchy</h3>
+				<ul class="tsd-hierarchy">
+					<li>
+						<span class="target">DecoratorLoaderService</span>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel-group tsd-index-group">
+				<h2>Index</h2>
+				<section class="tsd-panel tsd-index-panel">
+					<div class="tsd-index-content">
+						<section class="tsd-index-section ">
+							<h3>Constructors</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-constructor tsd-parent-kind-class"><a href="_app_services_decorator_loader_service_.decoratorloaderservice.html#constructor" class="tsd-kind-icon">constructor</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
+							<h3>Properties</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="_app_services_decorator_loader_service_.decoratorloaderservice.html#_decoratorloadererrorsubject" class="tsd-kind-icon">_decorator<wbr>Loader<wbr>Error<wbr>Subject</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="_app_services_decorator_loader_service_.decoratorloaderservice.html#decoratoreventservice" class="tsd-kind-icon">decorator<wbr>Event<wbr>Service</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_app_services_decorator_loader_service_.decoratorloaderservice.html#decoratorloadererror" class="tsd-kind-icon">decorator<wbr>Loader<wbr>Error</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="_app_services_decorator_loader_service_.decoratorloaderservice.html#decoratortimeservice" class="tsd-kind-icon">decorator<wbr>Time<wbr>Service</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="_app_services_decorator_loader_service_.decoratorloaderservice.html#decoratorsfilterservice" class="tsd-kind-icon">decorators<wbr>Filter<wbr>Service</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="_app_services_decorator_loader_service_.decoratorloaderservice.html#http" class="tsd-kind-icon">http</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
+							<h3>Methods</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_app_services_decorator_loader_service_.decoratorloaderservice.html#loadalldecorators" class="tsd-kind-icon">load<wbr>All<wbr>Decorators</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_app_services_decorator_loader_service_.decoratorloaderservice.html#loadhostdecoratorsoftype" class="tsd-kind-icon">load<wbr>Host<wbr>Decorators<wbr>OfType</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_app_services_decorator_loader_service_.decoratorloaderservice.html#loadhostnodedecorators" class="tsd-kind-icon">load<wbr>Host<wbr>Node<wbr>Decorators</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_app_services_decorator_loader_service_.decoratorloaderservice.html#loadlinkdecorators" class="tsd-kind-icon">load<wbr>Link<wbr>Decorators</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_app_services_decorator_loader_service_.decoratorloaderservice.html#loadlinkdecoratorsoftype" class="tsd-kind-icon">load<wbr>Link<wbr>Decorators<wbr>OfType</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_app_services_decorator_loader_service_.decoratorloaderservice.html#loadrouterdecoratorsoftype" class="tsd-kind-icon">load<wbr>Router<wbr>Decorators<wbr>OfType</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_app_services_decorator_loader_service_.decoratorloaderservice.html#loadrouternodedecorators" class="tsd-kind-icon">load<wbr>Router<wbr>Node<wbr>Decorators</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><a href="_app_services_decorator_loader_service_.decoratorloaderservice.html#parselinkmaildecorators" class="tsd-kind-icon">parse<wbr>Link<wbr>Mail<wbr>Decorators</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><a href="_app_services_decorator_loader_service_.decoratorloaderservice.html#parselinkspeeddecorators" class="tsd-kind-icon">parse<wbr>Link<wbr>Speed<wbr>Decorators</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><a href="_app_services_decorator_loader_service_.decoratorloaderservice.html#parsenodelogicalroledecorators" class="tsd-kind-icon">parse<wbr>Node<wbr>Logical<wbr>Role<wbr>Decorators</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><a href="_app_services_decorator_loader_service_.decoratorloaderservice.html#parsenodesemaphoredecorators" class="tsd-kind-icon">parse<wbr>Node<wbr>Semaphore<wbr>Decorators</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><a href="_app_services_decorator_loader_service_.decoratorloaderservice.html#parsenodestatusdecorators" class="tsd-kind-icon">parse<wbr>Node<wbr>Status<wbr>Decorators</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><a href="_app_services_decorator_loader_service_.decoratorloaderservice.html#passhostnodedecoratorstograph" class="tsd-kind-icon">pass<wbr>Host<wbr>Node<wbr>Decorators<wbr>ToGraph</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><a href="_app_services_decorator_loader_service_.decoratorloaderservice.html#passlinkdecoratorstograph" class="tsd-kind-icon">pass<wbr>Link<wbr>Decorators<wbr>ToGraph</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><a href="_app_services_decorator_loader_service_.decoratorloaderservice.html#passrouternodedecoratorstograph" class="tsd-kind-icon">pass<wbr>Router<wbr>Node<wbr>Decorators<wbr>ToGraph</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><a href="_app_services_decorator_loader_service_.decoratorloaderservice.html#retrievehostnodedecorators" class="tsd-kind-icon">retrieve<wbr>Host<wbr>Node<wbr>Decorators</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><a href="_app_services_decorator_loader_service_.decoratorloaderservice.html#retrievelinkdecorators" class="tsd-kind-icon">retrieve<wbr>Link<wbr>Decorators</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><a href="_app_services_decorator_loader_service_.decoratorloaderservice.html#retrieverouternodedecorators" class="tsd-kind-icon">retrieve<wbr>Router<wbr>Node<wbr>Decorators</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><a href="_app_services_decorator_loader_service_.decoratorloaderservice.html#triggerdecoratorloaderror" class="tsd-kind-icon">trigger<wbr>Decorator<wbr>Load<wbr>Error</a></li>
+							</ul>
+						</section>
+					</div>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Constructors</h2>
+				<section class="tsd-panel tsd-member tsd-kind-constructor tsd-parent-kind-class">
+					<a name="constructor" class="tsd-anchor"></a>
+					<h3>constructor</h3>
+					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">new <wbr>Decorator<wbr>Loader<wbr>Service<span class="tsd-signature-symbol">(</span>http<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">HttpClient</span>, decoratorEventService<span class="tsd-signature-symbol">: </span><a href="_app_services_decorator_event_service_.decoratoreventservice.html" class="tsd-signature-type">DecoratorEventService</a>, decoratorsFilterService<span class="tsd-signature-symbol">: </span><a href="_app_services_decorator_filter_service_.decoratorfilterservice.html" class="tsd-signature-type">DecoratorFilterService</a>, decoratorTimeService<span class="tsd-signature-symbol">: </span><a href="_app_services_decorator_time_service_.decoratortimeservice.html" class="tsd-signature-type">DecoratorTimeService</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_app_services_decorator_loader_service_.decoratorloaderservice.html" class="tsd-signature-type">DecoratorLoaderService</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in app/services/decorator-loader.service.ts:45</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>http: <span class="tsd-signature-type">HttpClient</span></h5>
+								</li>
+								<li>
+									<h5>decoratorEventService: <a href="_app_services_decorator_event_service_.decoratoreventservice.html" class="tsd-signature-type">DecoratorEventService</a></h5>
+								</li>
+								<li>
+									<h5>decoratorsFilterService: <a href="_app_services_decorator_filter_service_.decoratorfilterservice.html" class="tsd-signature-type">DecoratorFilterService</a></h5>
+								</li>
+								<li>
+									<h5>decoratorTimeService: <a href="_app_services_decorator_time_service_.decoratortimeservice.html" class="tsd-signature-type">DecoratorTimeService</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="_app_services_decorator_loader_service_.decoratorloaderservice.html" class="tsd-signature-type">DecoratorLoaderService</a></h4>
+						</li>
+					</ul>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Properties</h2>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private">
+					<a name="_decoratorloadererrorsubject" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagPrivate">Private</span> _decorator<wbr>Loader<wbr>Error<wbr>Subject</h3>
+					<div class="tsd-signature tsd-kind-icon">_decorator<wbr>Loader<wbr>Error<wbr>Subject<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Subject</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> =&nbsp;new Subject()</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in app/services/decorator-loader.service.ts:44</li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private">
+					<a name="decoratoreventservice" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagPrivate">Private</span> decorator<wbr>Event<wbr>Service</h3>
+					<div class="tsd-signature tsd-kind-icon">decorator<wbr>Event<wbr>Service<span class="tsd-signature-symbol">:</span> <a href="_app_services_decorator_event_service_.decoratoreventservice.html" class="tsd-signature-type">DecoratorEventService</a></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in app/services/decorator-loader.service.ts:48</li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="decoratorloadererror" class="tsd-anchor"></a>
+					<h3>decorator<wbr>Loader<wbr>Error</h3>
+					<div class="tsd-signature tsd-kind-icon">decorator<wbr>Loader<wbr>Error<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Observable</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> =&nbsp;this._decoratorLoaderErrorSubject.asObservable()</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in app/services/decorator-loader.service.ts:45</li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private">
+					<a name="decoratortimeservice" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagPrivate">Private</span> decorator<wbr>Time<wbr>Service</h3>
+					<div class="tsd-signature tsd-kind-icon">decorator<wbr>Time<wbr>Service<span class="tsd-signature-symbol">:</span> <a href="_app_services_decorator_time_service_.decoratortimeservice.html" class="tsd-signature-type">DecoratorTimeService</a></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in app/services/decorator-loader.service.ts:50</li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private">
+					<a name="decoratorsfilterservice" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagPrivate">Private</span> decorators<wbr>Filter<wbr>Service</h3>
+					<div class="tsd-signature tsd-kind-icon">decorators<wbr>Filter<wbr>Service<span class="tsd-signature-symbol">:</span> <a href="_app_services_decorator_filter_service_.decoratorfilterservice.html" class="tsd-signature-type">DecoratorFilterService</a></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in app/services/decorator-loader.service.ts:49</li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private">
+					<a name="http" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagPrivate">Private</span> http</h3>
+					<div class="tsd-signature tsd-kind-icon">http<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">HttpClient</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in app/services/decorator-loader.service.ts:47</li>
+						</ul>
+					</aside>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Methods</h2>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="loadalldecorators" class="tsd-anchor"></a>
+					<h3>load<wbr>All<wbr>Decorators</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">load<wbr>All<wbr>Decorators<span class="tsd-signature-symbol">(</span>hostNodeIds<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">[]</span>, routerNodeIds<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">[]</span>, linkIds<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in app/services/decorator-loader.service.ts:59</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Loads decorators for router, host nodes and links
+									Receives IDs of nodes and links whose decorators should be retrieved.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>hostNodeIds: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">[]</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>IDs of host nodes whose decorators should be retrieved</p>
+									</div>
+								</li>
+								<li>
+									<h5>routerNodeIds: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">[]</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>IDs of router nodes whose decorators should be retrieved</p>
+									</div>
+								</li>
+								<li>
+									<h5>linkIds: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">[]</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>IDs of links whose decorators should be retrieved</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="loadhostdecoratorsoftype" class="tsd-anchor"></a>
+					<h3>load<wbr>Host<wbr>Decorators<wbr>OfType</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">load<wbr>Host<wbr>Decorators<wbr>OfType<span class="tsd-signature-symbol">(</span>hostNodeIds<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">[]</span>, decoratorType<span class="tsd-signature-symbol">: </span><a href="../enums/_app_model_enums_host_node_decorator_type_enum_.hostnodedecoratortypeenum.html" class="tsd-signature-type">HostNodeDecoratorTypeEnum</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in app/services/decorator-loader.service.ts:117</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Loads decorators of certain type for host nodes</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>hostNodeIds: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">[]</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>IDs of host nodes whose decorators should be retrieved</p>
+									</div>
+								</li>
+								<li>
+									<h5>decoratorType: <a href="../enums/_app_model_enums_host_node_decorator_type_enum_.hostnodedecoratortypeenum.html" class="tsd-signature-type">HostNodeDecoratorTypeEnum</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>type of decorator which should be retrieved</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="loadhostnodedecorators" class="tsd-anchor"></a>
+					<h3>load<wbr>Host<wbr>Node<wbr>Decorators</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">load<wbr>Host<wbr>Node<wbr>Decorators<span class="tsd-signature-symbol">(</span>hostNodeIds<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in app/services/decorator-loader.service.ts:82</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Loads decorators for host nodes</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>hostNodeIds: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">[]</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>IDs of host nodes whose decorators should be retrieved</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="loadlinkdecorators" class="tsd-anchor"></a>
+					<h3>load<wbr>Link<wbr>Decorators</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">load<wbr>Link<wbr>Decorators<span class="tsd-signature-symbol">(</span>linkIds<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in app/services/decorator-loader.service.ts:94</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Loads decorators for links</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>linkIds: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">[]</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>IDs of links whose decorators should be retrieved</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="loadlinkdecoratorsoftype" class="tsd-anchor"></a>
+					<h3>load<wbr>Link<wbr>Decorators<wbr>OfType</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">load<wbr>Link<wbr>Decorators<wbr>OfType<span class="tsd-signature-symbol">(</span>linkIds<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">[]</span>, decoratorType<span class="tsd-signature-symbol">: </span><a href="../enums/_app_model_enums_link_decorator_type_enum_.linkdecoratortypeenum.html" class="tsd-signature-type">LinkDecoratorTypeEnum</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in app/services/decorator-loader.service.ts:128</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Loads decorators of certain type for links</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>linkIds: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">[]</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>IDs of links whose decorators should be retrieved</p>
+									</div>
+								</li>
+								<li>
+									<h5>decoratorType: <a href="../enums/_app_model_enums_link_decorator_type_enum_.linkdecoratortypeenum.html" class="tsd-signature-type">LinkDecoratorTypeEnum</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>type of decorator which should be retrieved</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="loadrouterdecoratorsoftype" class="tsd-anchor"></a>
+					<h3>load<wbr>Router<wbr>Decorators<wbr>OfType</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">load<wbr>Router<wbr>Decorators<wbr>OfType<span class="tsd-signature-symbol">(</span>routerNodeIds<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">[]</span>, decoratorType<span class="tsd-signature-symbol">: </span><a href="../enums/_app_model_enums_router_node_decorator_type_enum_.routernodedecoratortypeenum.html" class="tsd-signature-type">RouterNodeDecoratorTypeEnum</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in app/services/decorator-loader.service.ts:106</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Loads decorators of certain type for router nodes</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>routerNodeIds: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">[]</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>IDs of router nodes whose decorators should be retrieved</p>
+									</div>
+								</li>
+								<li>
+									<h5>decoratorType: <a href="../enums/_app_model_enums_router_node_decorator_type_enum_.routernodedecoratortypeenum.html" class="tsd-signature-type">RouterNodeDecoratorTypeEnum</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>type of decorator which should be retrieved</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="loadrouternodedecorators" class="tsd-anchor"></a>
+					<h3>load<wbr>Router<wbr>Node<wbr>Decorators</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">load<wbr>Router<wbr>Node<wbr>Decorators<span class="tsd-signature-symbol">(</span>routerNodeIds<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in app/services/decorator-loader.service.ts:69</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Loads decorators for router nodes</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>routerNodeIds: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">[]</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>IDs of router nodes whose decorators should be retrieved</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-private">
+					<a name="parselinkmaildecorators" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagPrivate">Private</span> parse<wbr>Link<wbr>Mail<wbr>Decorators</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-private">
+						<li class="tsd-signature tsd-kind-icon">parse<wbr>Link<wbr>Mail<wbr>Decorators<span class="tsd-signature-symbol">(</span>json<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_app_model_decorators_link_decorator_.linkdecorator.html" class="tsd-signature-type">LinkDecorator</a><span class="tsd-signature-symbol">[]</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in app/services/decorator-loader.service.ts:364</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Creates link mail decorators based on json data</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>json: <span class="tsd-signature-type">any</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>json data retrieved from server request</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="_app_model_decorators_link_decorator_.linkdecorator.html" class="tsd-signature-type">LinkDecorator</a><span class="tsd-signature-symbol">[]</span></h4>
+							<p>created objects with values from json</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-private">
+					<a name="parselinkspeeddecorators" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagPrivate">Private</span> parse<wbr>Link<wbr>Speed<wbr>Decorators</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-private">
+						<li class="tsd-signature tsd-kind-icon">parse<wbr>Link<wbr>Speed<wbr>Decorators<span class="tsd-signature-symbol">(</span>json<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_app_model_decorators_link_decorator_.linkdecorator.html" class="tsd-signature-type">LinkDecorator</a><span class="tsd-signature-symbol">[]</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in app/services/decorator-loader.service.ts:377</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Creates link speed decorators based on json data</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>json: <span class="tsd-signature-type">any</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>json data retrieved from server request</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="_app_model_decorators_link_decorator_.linkdecorator.html" class="tsd-signature-type">LinkDecorator</a><span class="tsd-signature-symbol">[]</span></h4>
+							<p>created objects with values from json</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-private">
+					<a name="parsenodelogicalroledecorators" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagPrivate">Private</span> parse<wbr>Node<wbr>Logical<wbr>Role<wbr>Decorators</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-private">
+						<li class="tsd-signature tsd-kind-icon">parse<wbr>Node<wbr>Logical<wbr>Role<wbr>Decorators<span class="tsd-signature-symbol">(</span>json<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_app_model_decorators_node_decorator_.nodedecorator.html" class="tsd-signature-type">NodeDecorator</a><span class="tsd-signature-symbol">[]</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in app/services/decorator-loader.service.ts:348</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Creates node logical role decorators based on json data</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>json: <span class="tsd-signature-type">any</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>json data retrieved from server request</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="_app_model_decorators_node_decorator_.nodedecorator.html" class="tsd-signature-type">NodeDecorator</a><span class="tsd-signature-symbol">[]</span></h4>
+							<p>created objects with values from json</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-private">
+					<a name="parsenodesemaphoredecorators" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagPrivate">Private</span> parse<wbr>Node<wbr>Semaphore<wbr>Decorators</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-private">
+						<li class="tsd-signature tsd-kind-icon">parse<wbr>Node<wbr>Semaphore<wbr>Decorators<span class="tsd-signature-symbol">(</span>json<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_app_model_decorators_node_decorator_.nodedecorator.html" class="tsd-signature-type">NodeDecorator</a><span class="tsd-signature-symbol">[]</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in app/services/decorator-loader.service.ts:334</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Creates node semaphore decorators based on json data</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>json: <span class="tsd-signature-type">any</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>json data retrieved from server request</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="_app_model_decorators_node_decorator_.nodedecorator.html" class="tsd-signature-type">NodeDecorator</a><span class="tsd-signature-symbol">[]</span></h4>
+							<p>created objects with values from json</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-private">
+					<a name="parsenodestatusdecorators" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagPrivate">Private</span> parse<wbr>Node<wbr>Status<wbr>Decorators</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-private">
+						<li class="tsd-signature tsd-kind-icon">parse<wbr>Node<wbr>Status<wbr>Decorators<span class="tsd-signature-symbol">(</span>json<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_app_model_decorators_node_decorator_.nodedecorator.html" class="tsd-signature-type">NodeDecorator</a><span class="tsd-signature-symbol">[]</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in app/services/decorator-loader.service.ts:321</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Creates node status decorators based on json data</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>json: <span class="tsd-signature-type">any</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>json data retrieved from server request</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="_app_model_decorators_node_decorator_.nodedecorator.html" class="tsd-signature-type">NodeDecorator</a><span class="tsd-signature-symbol">[]</span></h4>
+							<p>created objects with values from json</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-private">
+					<a name="passhostnodedecoratorstograph" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagPrivate">Private</span> pass<wbr>Host<wbr>Node<wbr>Decorators<wbr>ToGraph</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-private">
+						<li class="tsd-signature tsd-kind-icon">pass<wbr>Host<wbr>Node<wbr>Decorators<wbr>ToGraph<span class="tsd-signature-symbol">(</span>nodeObservables<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Observable</span><span class="tsd-signature-symbol">&lt;</span><a href="_app_model_decorators_node_decorator_.nodedecorator.html" class="tsd-signature-type">NodeDecorator</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[]</span>, decoratorTypes<span class="tsd-signature-symbol">: </span><a href="../enums/_app_model_enums_host_node_decorator_type_enum_.hostnodedecoratortypeenum.html" class="tsd-signature-type">HostNodeDecoratorTypeEnum</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in app/services/decorator-loader.service.ts:418</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Flattens results from multiple server requests and triggers events to notify visual components about changes</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>nodeObservables: <span class="tsd-signature-type">Observable</span><span class="tsd-signature-symbol">&lt;</span><a href="_app_model_decorators_node_decorator_.nodedecorator.html" class="tsd-signature-type">NodeDecorator</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[]</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>array of all observables of node decorators from server requests</p>
+									</div>
+								</li>
+								<li>
+									<h5>decoratorTypes: <a href="../enums/_app_model_enums_host_node_decorator_type_enum_.hostnodedecoratortypeenum.html" class="tsd-signature-type">HostNodeDecoratorTypeEnum</a><span class="tsd-signature-symbol">[]</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>array of reloaded decorator types</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-private">
+					<a name="passlinkdecoratorstograph" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagPrivate">Private</span> pass<wbr>Link<wbr>Decorators<wbr>ToGraph</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-private">
+						<li class="tsd-signature tsd-kind-icon">pass<wbr>Link<wbr>Decorators<wbr>ToGraph<span class="tsd-signature-symbol">(</span>linkObservables<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Observable</span><span class="tsd-signature-symbol">&lt;</span><a href="_app_model_decorators_link_decorator_.linkdecorator.html" class="tsd-signature-type">LinkDecorator</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[]</span>, decoratorTypes<span class="tsd-signature-symbol">: </span><a href="../enums/_app_model_enums_link_decorator_type_enum_.linkdecoratortypeenum.html" class="tsd-signature-type">LinkDecoratorTypeEnum</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in app/services/decorator-loader.service.ts:444</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Flattens results from multiple server requests and triggers events to notify visual components about changes</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>linkObservables: <span class="tsd-signature-type">Observable</span><span class="tsd-signature-symbol">&lt;</span><a href="_app_model_decorators_link_decorator_.linkdecorator.html" class="tsd-signature-type">LinkDecorator</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[]</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>array of all observable of link decorators from server requests</p>
+									</div>
+								</li>
+								<li>
+									<h5>decoratorTypes: <a href="../enums/_app_model_enums_link_decorator_type_enum_.linkdecoratortypeenum.html" class="tsd-signature-type">LinkDecoratorTypeEnum</a><span class="tsd-signature-symbol">[]</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>array of reloaded decorator types</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-private">
+					<a name="passrouternodedecoratorstograph" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagPrivate">Private</span> pass<wbr>Router<wbr>Node<wbr>Decorators<wbr>ToGraph</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-private">
+						<li class="tsd-signature tsd-kind-icon">pass<wbr>Router<wbr>Node<wbr>Decorators<wbr>ToGraph<span class="tsd-signature-symbol">(</span>nodeObservables<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Observable</span><span class="tsd-signature-symbol">&lt;</span><a href="_app_model_decorators_node_decorator_.nodedecorator.html" class="tsd-signature-type">NodeDecorator</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[]</span>, decoratorTypes<span class="tsd-signature-symbol">: </span><a href="../enums/_app_model_enums_router_node_decorator_type_enum_.routernodedecoratortypeenum.html" class="tsd-signature-type">RouterNodeDecoratorTypeEnum</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in app/services/decorator-loader.service.ts:392</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Flattens results from multiple server requests and triggers events to notify visual components about changes</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>nodeObservables: <span class="tsd-signature-type">Observable</span><span class="tsd-signature-symbol">&lt;</span><a href="_app_model_decorators_node_decorator_.nodedecorator.html" class="tsd-signature-type">NodeDecorator</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[]</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>array of all observables of node decorators from server requests</p>
+									</div>
+								</li>
+								<li>
+									<h5>decoratorTypes: <a href="../enums/_app_model_enums_router_node_decorator_type_enum_.routernodedecoratortypeenum.html" class="tsd-signature-type">RouterNodeDecoratorTypeEnum</a><span class="tsd-signature-symbol">[]</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>array of reloaded decorator types</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-private">
+					<a name="retrievehostnodedecorators" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagPrivate">Private</span> retrieve<wbr>Host<wbr>Node<wbr>Decorators</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-private">
+						<li class="tsd-signature tsd-kind-icon">retrieve<wbr>Host<wbr>Node<wbr>Decorators<span class="tsd-signature-symbol">(</span>hostNodeIds<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">[]</span>, hostNodeDecoratorTypes<span class="tsd-signature-symbol">: </span><a href="../enums/_app_model_enums_host_node_decorator_type_enum_.hostnodedecoratortypeenum.html" class="tsd-signature-type">HostNodeDecoratorTypeEnum</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Observable</span><span class="tsd-signature-symbol">&lt;</span><a href="_app_model_decorators_node_decorator_.nodedecorator.html" class="tsd-signature-type">NodeDecorator</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[]</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in app/services/decorator-loader.service.ts:140</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Retrieves host node decorators for every id based on desired decorator types</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>hostNodeIds: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">[]</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>list of node ids which decorators should be retrieved</p>
+									</div>
+								</li>
+								<li>
+									<h5>hostNodeDecoratorTypes: <a href="../enums/_app_model_enums_host_node_decorator_type_enum_.hostnodedecoratortypeenum.html" class="tsd-signature-type">HostNodeDecoratorTypeEnum</a><span class="tsd-signature-symbol">[]</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>types of decorators which should be retrieved</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Observable</span><span class="tsd-signature-symbol">&lt;</span><a href="_app_model_decorators_node_decorator_.nodedecorator.html" class="tsd-signature-type">NodeDecorator</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[]</span></h4>
+							<p>list of observables returned from requests</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-private">
+					<a name="retrievelinkdecorators" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagPrivate">Private</span> retrieve<wbr>Link<wbr>Decorators</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-private">
+						<li class="tsd-signature tsd-kind-icon">retrieve<wbr>Link<wbr>Decorators<span class="tsd-signature-symbol">(</span>linkIds<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">[]</span>, linkDecoratorTypes<span class="tsd-signature-symbol">: </span><a href="../enums/_app_model_enums_link_decorator_type_enum_.linkdecoratortypeenum.html" class="tsd-signature-type">LinkDecoratorTypeEnum</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Observable</span><span class="tsd-signature-symbol">&lt;</span><a href="_app_model_decorators_link_decorator_.linkdecorator.html" class="tsd-signature-type">LinkDecorator</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[]</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in app/services/decorator-loader.service.ts:262</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Retrieves link decorators for every id based on desired decorator types</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>linkIds: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">[]</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>list of link ids which decorators should be retrieved</p>
+									</div>
+								</li>
+								<li>
+									<h5>linkDecoratorTypes: <a href="../enums/_app_model_enums_link_decorator_type_enum_.linkdecoratortypeenum.html" class="tsd-signature-type">LinkDecoratorTypeEnum</a><span class="tsd-signature-symbol">[]</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>types of decorators which should be retrieved</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Observable</span><span class="tsd-signature-symbol">&lt;</span><a href="_app_model_decorators_link_decorator_.linkdecorator.html" class="tsd-signature-type">LinkDecorator</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[]</span></h4>
+							<p>list of observables returned from requests</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-private">
+					<a name="retrieverouternodedecorators" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagPrivate">Private</span> retrieve<wbr>Router<wbr>Node<wbr>Decorators</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-private">
+						<li class="tsd-signature tsd-kind-icon">retrieve<wbr>Router<wbr>Node<wbr>Decorators<span class="tsd-signature-symbol">(</span>routerNodeIds<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">[]</span>, routerNodeDecoratorTypes<span class="tsd-signature-symbol">: </span><a href="../enums/_app_model_enums_router_node_decorator_type_enum_.routernodedecoratortypeenum.html" class="tsd-signature-type">RouterNodeDecoratorTypeEnum</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Observable</span><span class="tsd-signature-symbol">&lt;</span><a href="_app_model_decorators_node_decorator_.nodedecorator.html" class="tsd-signature-type">NodeDecorator</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[]</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in app/services/decorator-loader.service.ts:216</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Retrieves router node decorators for every id based on desired decorator types</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>routerNodeIds: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">[]</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>list of node ids which decorators should be retrieved</p>
+									</div>
+								</li>
+								<li>
+									<h5>routerNodeDecoratorTypes: <a href="../enums/_app_model_enums_router_node_decorator_type_enum_.routernodedecoratortypeenum.html" class="tsd-signature-type">RouterNodeDecoratorTypeEnum</a><span class="tsd-signature-symbol">[]</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>types of decorators which should be retrieved</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Observable</span><span class="tsd-signature-symbol">&lt;</span><a href="_app_model_decorators_node_decorator_.nodedecorator.html" class="tsd-signature-type">NodeDecorator</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[]</span></h4>
+							<p>{Observable&lt;NodeDecorator[]&gt;[] list of observables returned from requests</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-private">
+					<a name="triggerdecoratorloaderror" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagPrivate">Private</span> trigger<wbr>Decorator<wbr>Load<wbr>Error</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-private">
+						<li class="tsd-signature tsd-kind-icon">trigger<wbr>Decorator<wbr>Load<wbr>Error<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in app/services/decorator-loader.service.ts:466</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Triggers node decorator load error event</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+			</section>
+		</div>
+		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
+			<nav class="tsd-navigation primary">
+				<ul>
+					<li class="globals  ">
+						<a href="../globals.html"><em>Globals</em></a>
+					</li>
+					<li class="current tsd-kind-external-module">
+						<a href="../modules/_app_services_decorator_loader_service_.html">"app/services/decorator-<wbr>loader.service"</a>
+					</li>
+				</ul>
+			</nav>
+			<nav class="tsd-navigation secondary menu-sticky">
+				<ul class="before-current">
+				</ul>
+				<ul class="current">
+					<li class="current tsd-kind-class tsd-parent-kind-external-module">
+						<a href="_app_services_decorator_loader_service_.decoratorloaderservice.html" class="tsd-kind-icon">Decorator<wbr>Loader<wbr>Service</a>
+						<ul>
+							<li class=" tsd-kind-constructor tsd-parent-kind-class">
+								<a href="_app_services_decorator_loader_service_.decoratorloaderservice.html#constructor" class="tsd-kind-icon">constructor</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private">
+								<a href="_app_services_decorator_loader_service_.decoratorloaderservice.html#_decoratorloadererrorsubject" class="tsd-kind-icon">_decorator<wbr>Loader<wbr>Error<wbr>Subject</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private">
+								<a href="_app_services_decorator_loader_service_.decoratorloaderservice.html#decoratoreventservice" class="tsd-kind-icon">decorator<wbr>Event<wbr>Service</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="_app_services_decorator_loader_service_.decoratorloaderservice.html#decoratorloadererror" class="tsd-kind-icon">decorator<wbr>Loader<wbr>Error</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private">
+								<a href="_app_services_decorator_loader_service_.decoratorloaderservice.html#decoratortimeservice" class="tsd-kind-icon">decorator<wbr>Time<wbr>Service</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private">
+								<a href="_app_services_decorator_loader_service_.decoratorloaderservice.html#decoratorsfilterservice" class="tsd-kind-icon">decorators<wbr>Filter<wbr>Service</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private">
+								<a href="_app_services_decorator_loader_service_.decoratorloaderservice.html#http" class="tsd-kind-icon">http</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="_app_services_decorator_loader_service_.decoratorloaderservice.html#loadalldecorators" class="tsd-kind-icon">load<wbr>All<wbr>Decorators</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="_app_services_decorator_loader_service_.decoratorloaderservice.html#loadhostdecoratorsoftype" class="tsd-kind-icon">load<wbr>Host<wbr>Decorators<wbr>OfType</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="_app_services_decorator_loader_service_.decoratorloaderservice.html#loadhostnodedecorators" class="tsd-kind-icon">load<wbr>Host<wbr>Node<wbr>Decorators</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="_app_services_decorator_loader_service_.decoratorloaderservice.html#loadlinkdecorators" class="tsd-kind-icon">load<wbr>Link<wbr>Decorators</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="_app_services_decorator_loader_service_.decoratorloaderservice.html#loadlinkdecoratorsoftype" class="tsd-kind-icon">load<wbr>Link<wbr>Decorators<wbr>OfType</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="_app_services_decorator_loader_service_.decoratorloaderservice.html#loadrouterdecoratorsoftype" class="tsd-kind-icon">load<wbr>Router<wbr>Decorators<wbr>OfType</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="_app_services_decorator_loader_service_.decoratorloaderservice.html#loadrouternodedecorators" class="tsd-kind-icon">load<wbr>Router<wbr>Node<wbr>Decorators</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-private">
+								<a href="_app_services_decorator_loader_service_.decoratorloaderservice.html#parselinkmaildecorators" class="tsd-kind-icon">parse<wbr>Link<wbr>Mail<wbr>Decorators</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-private">
+								<a href="_app_services_decorator_loader_service_.decoratorloaderservice.html#parselinkspeeddecorators" class="tsd-kind-icon">parse<wbr>Link<wbr>Speed<wbr>Decorators</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-private">
+								<a href="_app_services_decorator_loader_service_.decoratorloaderservice.html#parsenodelogicalroledecorators" class="tsd-kind-icon">parse<wbr>Node<wbr>Logical<wbr>Role<wbr>Decorators</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-private">
+								<a href="_app_services_decorator_loader_service_.decoratorloaderservice.html#parsenodesemaphoredecorators" class="tsd-kind-icon">parse<wbr>Node<wbr>Semaphore<wbr>Decorators</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-private">
+								<a href="_app_services_decorator_loader_service_.decoratorloaderservice.html#parsenodestatusdecorators" class="tsd-kind-icon">parse<wbr>Node<wbr>Status<wbr>Decorators</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-private">
+								<a href="_app_services_decorator_loader_service_.decoratorloaderservice.html#passhostnodedecoratorstograph" class="tsd-kind-icon">pass<wbr>Host<wbr>Node<wbr>Decorators<wbr>ToGraph</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-private">
+								<a href="_app_services_decorator_loader_service_.decoratorloaderservice.html#passlinkdecoratorstograph" class="tsd-kind-icon">pass<wbr>Link<wbr>Decorators<wbr>ToGraph</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-private">
+								<a href="_app_services_decorator_loader_service_.decoratorloaderservice.html#passrouternodedecoratorstograph" class="tsd-kind-icon">pass<wbr>Router<wbr>Node<wbr>Decorators<wbr>ToGraph</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-private">
+								<a href="_app_services_decorator_loader_service_.decoratorloaderservice.html#retrievehostnodedecorators" class="tsd-kind-icon">retrieve<wbr>Host<wbr>Node<wbr>Decorators</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-private">
+								<a href="_app_services_decorator_loader_service_.decoratorloaderservice.html#retrievelinkdecorators" class="tsd-kind-icon">retrieve<wbr>Link<wbr>Decorators</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-private">
+								<a href="_app_services_decorator_loader_service_.decoratorloaderservice.html#retrieverouternodedecorators" class="tsd-kind-icon">retrieve<wbr>Router<wbr>Node<wbr>Decorators</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-private">
+								<a href="_app_services_decorator_loader_service_.decoratorloaderservice.html#triggerdecoratorloaderror" class="tsd-kind-icon">trigger<wbr>Decorator<wbr>Load<wbr>Error</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+				<ul class="after-current">
+					<li class=" tsd-kind-object-literal tsd-parent-kind-external-module tsd-is-not-exported">
+						<a href="../modules/_app_services_decorator_loader_service_.html#httpoptions" class="tsd-kind-icon">http<wbr>Options</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+</div>
+<footer class="with-border-bottom">
+	<div class="container">
+		<h2>Legend</h2>
+		<div class="tsd-legend-group">
+			<ul class="tsd-legend">
+				<li class="tsd-kind-module"><span class="tsd-kind-icon">Module</span></li>
+				<li class="tsd-kind-object-literal"><span class="tsd-kind-icon">Object literal</span></li>
+				<li class="tsd-kind-variable"><span class="tsd-kind-icon">Variable</span></li>
+				<li class="tsd-kind-function"><span class="tsd-kind-icon">Function</span></li>
+				<li class="tsd-kind-function tsd-has-type-parameter"><span class="tsd-kind-icon">Function with type parameter</span></li>
+				<li class="tsd-kind-index-signature"><span class="tsd-kind-icon">Index signature</span></li>
+				<li class="tsd-kind-type-alias"><span class="tsd-kind-icon">Type alias</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-enum"><span class="tsd-kind-icon">Enumeration</span></li>
+				<li class="tsd-kind-enum-member"><span class="tsd-kind-icon">Enumeration member</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-enum"><span class="tsd-kind-icon">Property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-enum"><span class="tsd-kind-icon">Method</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-interface"><span class="tsd-kind-icon">Interface</span></li>
+				<li class="tsd-kind-interface tsd-has-type-parameter"><span class="tsd-kind-icon">Interface with type parameter</span></li>
+				<li class="tsd-kind-constructor tsd-parent-kind-interface"><span class="tsd-kind-icon">Constructor</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-interface"><span class="tsd-kind-icon">Property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-interface"><span class="tsd-kind-icon">Method</span></li>
+				<li class="tsd-kind-index-signature tsd-parent-kind-interface"><span class="tsd-kind-icon">Index signature</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-class"><span class="tsd-kind-icon">Class</span></li>
+				<li class="tsd-kind-class tsd-has-type-parameter"><span class="tsd-kind-icon">Class with type parameter</span></li>
+				<li class="tsd-kind-constructor tsd-parent-kind-class"><span class="tsd-kind-icon">Constructor</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-class"><span class="tsd-kind-icon">Property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class"><span class="tsd-kind-icon">Method</span></li>
+				<li class="tsd-kind-accessor tsd-parent-kind-class"><span class="tsd-kind-icon">Accessor</span></li>
+				<li class="tsd-kind-index-signature tsd-parent-kind-class"><span class="tsd-kind-icon">Index signature</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-constructor tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited constructor</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited method</span></li>
+				<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited accessor</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected method</span></li>
+				<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected accessor</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private method</span></li>
+				<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private accessor</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><span class="tsd-kind-icon">Static property</span></li>
+				<li class="tsd-kind-call-signature tsd-parent-kind-class tsd-is-static"><span class="tsd-kind-icon">Static method</span></li>
+			</ul>
+		</div>
+	</div>
+</footer>
+<div class="container tsd-generator">
+	<p>Generated using <a href="http://typedoc.org/" target="_blank">TypeDoc</a></p>
+</div>
+<div class="overlay"></div>
+<script src="../assets/js/main.js"></script>
+<script>if (location.protocol == 'file:') document.write('<script src="../assets/js/search.js"><' + '/script>');</script>
+</body>
+</html>

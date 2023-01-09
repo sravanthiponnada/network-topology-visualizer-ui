@@ -1,0 +1,16 @@
+{
+  "nodes_decorators": [
+    {
+      "node_id": 2,
+      "value": "bot"
+    },
+    {
+      "node_id": 4,
+      "value": "attacker"
+    },
+    {
+      "node_id": 8,
+      "value": "victim"
+    }
+  ]
+}

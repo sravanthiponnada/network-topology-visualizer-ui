@@ -1,0 +1,15 @@
+<agm-marker
+  [iconUrl]="'assets/images/icons/map-' + node.physicalRole + '.svg'"
+  [latitude]="node.geo.latitude"
+  [longitude]="node.geo.longitude"
+  [title]="'title'">
+  <agm-snazzy-info-window [closeWhenOthersOpen]="true">
+    <ng-template>
+      <h3>{{ this.node.name }}</h3>
+      <p>ID: {{ this.node.id  }}</p>
+      <p>Physical role: {{ this.node.physicalRole }}</p>
+      <p>Latitude: {{ this.node.geo.latitude }}</p>
+      <p>Longitude: {{ this.node.geo.longitude  }}</p>
+    </ng-template>
+  </agm-snazzy-info-window>
+</agm-marker>

@@ -1,0 +1,1288 @@
+<!doctype html>
+<html class="default no-js">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>ForceDirectedGraph | force-directed-graph</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../assets/css/main.css">
+</head>
+<body>
+<header>
+	<div class="tsd-page-toolbar">
+		<div class="container">
+			<div class="table-wrap">
+				<div class="table-cell" id="tsd-search" data-index="../assets/js/search.js" data-base="..">
+					<div class="field">
+						<label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
+						<input id="tsd-search-field" type="text" />
+					</div>
+					<ul class="results">
+						<li class="state loading">Preparing search index...</li>
+						<li class="state failure">The search index is not available</li>
+					</ul>
+					<a href="../index.html" class="title">force-directed-graph</a>
+				</div>
+				<div class="table-cell" id="tsd-widgets">
+					<div id="tsd-filter">
+						<a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a>
+						<div class="tsd-filter-group">
+							<div class="tsd-select" id="tsd-filter-visibility">
+								<span class="tsd-select-label">All</span>
+								<ul class="tsd-select-list">
+									<li data-value="public">Public</li>
+									<li data-value="protected">Public/Protected</li>
+									<li data-value="private" class="selected">All</li>
+								</ul>
+							</div>
+							<input type="checkbox" id="tsd-filter-inherited" checked />
+							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
+							<input type="checkbox" id="tsd-filter-externals" checked />
+							<label class="tsd-widget" for="tsd-filter-externals">Externals</label>
+							<input type="checkbox" id="tsd-filter-only-exported" />
+							<label class="tsd-widget" for="tsd-filter-only-exported">Only exported</label>
+						</div>
+					</div>
+					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="tsd-page-title">
+		<div class="container">
+			<ul class="tsd-breadcrumb">
+				<li>
+					<a href="../globals.html">Globals</a>
+				</li>
+				<li>
+					<a href="../modules/_app_model_graph_force_directed_graph_.html">&quot;app/model/graph/force-directed-graph&quot;</a>
+				</li>
+				<li>
+					<a href="_app_model_graph_force_directed_graph_.forcedirectedgraph.html">ForceDirectedGraph</a>
+				</li>
+			</ul>
+			<h1>Class ForceDirectedGraph</h1>
+		</div>
+	</div>
+</header>
+<div class="container container-main">
+	<div class="row">
+		<div class="col-8 col-content">
+			<section class="tsd-panel tsd-comment">
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>Model of force directed graph-visual. Used for displaying graph-visual visualization and user interaction with it.
+							Uses D3 and needs to get nodes, links and options (window size) on creation.
+							D3 also does not support hierarchical graphs and it would be complicated to create new graph-visual for every subnetwork
+							so this class implements multiple methods that fakes hierarchical structure and expanding/collapsing networks by
+							removing and adding links and nodes and using forces in cooperation with structured model of nodes.
+						This way, multi-layered hierarchies are supported.</p>
+					</div>
+				</div>
+			</section>
+			<section class="tsd-panel tsd-hierarchy">
+				<h3>Hierarchy</h3>
+				<ul class="tsd-hierarchy">
+					<li>
+						<span class="target">ForceDirectedGraph</span>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel-group tsd-index-group">
+				<h2>Index</h2>
+				<section class="tsd-panel tsd-index-panel">
+					<div class="tsd-index-content">
+						<section class="tsd-index-section ">
+							<h3>Constructors</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-constructor tsd-parent-kind-class"><a href="_app_model_graph_force_directed_graph_.forcedirectedgraph.html#constructor" class="tsd-kind-icon">constructor</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
+							<h3>Properties</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="_app_model_graph_force_directed_graph_.forcedirectedgraph.html#height" class="tsd-kind-icon">height</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_app_model_graph_force_directed_graph_.forcedirectedgraph.html#links" class="tsd-kind-icon">links</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_app_model_graph_force_directed_graph_.forcedirectedgraph.html#nodes" class="tsd-kind-icon">nodes</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="_app_model_graph_force_directed_graph_.forcedirectedgraph.html#nonactivelinks" class="tsd-kind-icon">non<wbr>Active<wbr>Links</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="_app_model_graph_force_directed_graph_.forcedirectedgraph.html#nonactivenodes" class="tsd-kind-icon">non<wbr>Active<wbr>Nodes</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_app_model_graph_force_directed_graph_.forcedirectedgraph.html#simulation" class="tsd-kind-icon">simulation</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_app_model_graph_force_directed_graph_.forcedirectedgraph.html#ticker" class="tsd-kind-icon">ticker</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="_app_model_graph_force_directed_graph_.forcedirectedgraph.html#width" class="tsd-kind-icon">width</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
+							<h3>Methods</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><a href="_app_model_graph_force_directed_graph_.forcedirectedgraph.html#addlinks" class="tsd-kind-icon">add<wbr>Links</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_app_model_graph_force_directed_graph_.forcedirectedgraph.html#addsubnetwork" class="tsd-kind-icon">add<wbr>Subnetwork</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><a href="_app_model_graph_force_directed_graph_.forcedirectedgraph.html#addsubnetworknodes" class="tsd-kind-icon">add<wbr>Subnetwork<wbr>Nodes</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><a href="_app_model_graph_force_directed_graph_.forcedirectedgraph.html#calculatechildxposition" class="tsd-kind-icon">calculate<wbr>ChildXPosition</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><a href="_app_model_graph_force_directed_graph_.forcedirectedgraph.html#calculatechildyposition" class="tsd-kind-icon">calculate<wbr>ChildYPosition</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><a href="_app_model_graph_force_directed_graph_.forcedirectedgraph.html#findsubnetlinkstoadd" class="tsd-kind-icon">find<wbr>Subnet<wbr>Links<wbr>ToAdd</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><a href="_app_model_graph_force_directed_graph_.forcedirectedgraph.html#findsubnetlinkstoremove" class="tsd-kind-icon">find<wbr>Subnet<wbr>Links<wbr>ToRemove</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_app_model_graph_force_directed_graph_.forcedirectedgraph.html#getgraphheight" class="tsd-kind-icon">get<wbr>Graph<wbr>Height</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_app_model_graph_force_directed_graph_.forcedirectedgraph.html#getgraphwidth" class="tsd-kind-icon">get<wbr>Graph<wbr>Width</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><a href="_app_model_graph_force_directed_graph_.forcedirectedgraph.html#getlargestnodexpositioningraph" class="tsd-kind-icon">get<wbr>Largest<wbr>NodeXPosition<wbr>InGraph</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><a href="_app_model_graph_force_directed_graph_.forcedirectedgraph.html#getlargestnodeypositioningraph" class="tsd-kind-icon">get<wbr>Largest<wbr>NodeYPosition<wbr>InGraph</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_app_model_graph_force_directed_graph_.forcedirectedgraph.html#getrouternodes" class="tsd-kind-icon">get<wbr>Router<wbr>Nodes</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_app_model_graph_force_directed_graph_.forcedirectedgraph.html#hierarchicallayout" class="tsd-kind-icon">hierarchical<wbr>Layout</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><a href="_app_model_graph_force_directed_graph_.forcedirectedgraph.html#initlinks" class="tsd-kind-icon">init<wbr>Links</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><a href="_app_model_graph_force_directed_graph_.forcedirectedgraph.html#initnodes" class="tsd-kind-icon">init<wbr>Nodes</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_app_model_graph_force_directed_graph_.forcedirectedgraph.html#initposition" class="tsd-kind-icon">init<wbr>Position</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_app_model_graph_force_directed_graph_.forcedirectedgraph.html#initsimulation" class="tsd-kind-icon">init<wbr>Simulation</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_app_model_graph_force_directed_graph_.forcedirectedgraph.html#onresize" class="tsd-kind-icon">on<wbr>Resize</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><a href="_app_model_graph_force_directed_graph_.forcedirectedgraph.html#removelinks" class="tsd-kind-icon">remove<wbr>Links</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_app_model_graph_force_directed_graph_.forcedirectedgraph.html#removesubnetwork" class="tsd-kind-icon">remove<wbr>Subnetwork</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><a href="_app_model_graph_force_directed_graph_.forcedirectedgraph.html#removesubnetworknodes" class="tsd-kind-icon">remove<wbr>Subnetwork<wbr>Nodes</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><a href="_app_model_graph_force_directed_graph_.forcedirectedgraph.html#selforganizeandstop" class="tsd-kind-icon">self<wbr>Organize<wbr>And<wbr>Stop</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><a href="_app_model_graph_force_directed_graph_.forcedirectedgraph.html#selforganizesubnetandstop" class="tsd-kind-icon">self<wbr>Organize<wbr>Subnet<wbr>And<wbr>Stop</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><a href="_app_model_graph_force_directed_graph_.forcedirectedgraph.html#setontick" class="tsd-kind-icon">set<wbr>OnTick</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><a href="_app_model_graph_force_directed_graph_.forcedirectedgraph.html#subnetlinksforce" class="tsd-kind-icon">subnet<wbr>Links<wbr>Force</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><a href="_app_model_graph_force_directed_graph_.forcedirectedgraph.html#subnetnodesforce" class="tsd-kind-icon">subnet<wbr>Nodes<wbr>Force</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_app_model_graph_force_directed_graph_.forcedirectedgraph.html#turnoffforces" class="tsd-kind-icon">turn<wbr>Off<wbr>Forces</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><a href="_app_model_graph_force_directed_graph_.forcedirectedgraph.html#turnoffhierarchicallayoutforces" class="tsd-kind-icon">turn<wbr>Off<wbr>Hierarchical<wbr>Layout<wbr>Forces</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><a href="_app_model_graph_force_directed_graph_.forcedirectedgraph.html#turnoffinitialforces" class="tsd-kind-icon">turn<wbr>Off<wbr>Initial<wbr>Forces</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><a href="_app_model_graph_force_directed_graph_.forcedirectedgraph.html#turnoffresizeforces" class="tsd-kind-icon">turn<wbr>Off<wbr>Resize<wbr>Forces</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><a href="_app_model_graph_force_directed_graph_.forcedirectedgraph.html#turnoffsubnetrevealforces" class="tsd-kind-icon">turn<wbr>Off<wbr>Subnet<wbr>Reveal<wbr>Forces</a></li>
+							</ul>
+						</section>
+					</div>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Constructors</h2>
+				<section class="tsd-panel tsd-member tsd-kind-constructor tsd-parent-kind-class">
+					<a name="constructor" class="tsd-anchor"></a>
+					<h3>constructor</h3>
+					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">new <wbr>Force<wbr>Directed<wbr>Graph<span class="tsd-signature-symbol">(</span>nodes<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, links<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, options<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_app_model_graph_force_directed_graph_.forcedirectedgraph.html" class="tsd-signature-type">ForceDirectedGraph</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in app/model/graph/force-directed-graph.ts:29</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>nodes: <span class="tsd-signature-type">any</span></h5>
+								</li>
+								<li>
+									<h5>links: <span class="tsd-signature-type">any</span></h5>
+								</li>
+								<li>
+									<h5>options: <span class="tsd-signature-type">object</span></h5>
+									<ul class="tsd-parameters">
+										<li class="tsd-parameter">
+											<h5>height<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></h5>
+										</li>
+										<li class="tsd-parameter">
+											<h5>width<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></h5>
+										</li>
+									</ul>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="_app_model_graph_force_directed_graph_.forcedirectedgraph.html" class="tsd-signature-type">ForceDirectedGraph</a></h4>
+						</li>
+					</ul>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Properties</h2>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private">
+					<a name="height" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagPrivate">Private</span> height</h3>
+					<div class="tsd-signature tsd-kind-icon">height<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in app/model/graph/force-directed-graph.ts:29</li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="links" class="tsd-anchor"></a>
+					<h3>links</h3>
+					<div class="tsd-signature tsd-kind-icon">links<span class="tsd-signature-symbol">:</span> <a href="_app_model_link_link_.link.html" class="tsd-signature-type">Link</a><span class="tsd-signature-symbol">[]</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in app/model/graph/force-directed-graph.ts:23</li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="nodes" class="tsd-anchor"></a>
+					<h3>nodes</h3>
+					<div class="tsd-signature tsd-kind-icon">nodes<span class="tsd-signature-symbol">:</span> <a href="_app_model_node_node_.node.html" class="tsd-signature-type">Node</a><span class="tsd-signature-symbol">[]</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in app/model/graph/force-directed-graph.ts:22</li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private">
+					<a name="nonactivelinks" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagPrivate">Private</span> non<wbr>Active<wbr>Links</h3>
+					<div class="tsd-signature tsd-kind-icon">non<wbr>Active<wbr>Links<span class="tsd-signature-symbol">:</span> <a href="_app_model_link_link_.link.html" class="tsd-signature-type">Link</a><span class="tsd-signature-symbol">[]</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in app/model/graph/force-directed-graph.ts:26</li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private">
+					<a name="nonactivenodes" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagPrivate">Private</span> non<wbr>Active<wbr>Nodes</h3>
+					<div class="tsd-signature tsd-kind-icon">non<wbr>Active<wbr>Nodes<span class="tsd-signature-symbol">:</span> <a href="_app_model_node_node_.node.html" class="tsd-signature-type">Node</a><span class="tsd-signature-symbol">[]</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in app/model/graph/force-directed-graph.ts:25</li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="simulation" class="tsd-anchor"></a>
+					<h3>simulation</h3>
+					<div class="tsd-signature tsd-kind-icon">simulation<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Simulation</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in app/model/graph/force-directed-graph.ts:20</li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="ticker" class="tsd-anchor"></a>
+					<h3>ticker</h3>
+					<div class="tsd-signature tsd-kind-icon">ticker<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">EventEmitter</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Simulation</span><span class="tsd-signature-symbol">&lt;</span><a href="_app_model_node_node_.node.html" class="tsd-signature-type">Node</a><span class="tsd-signature-symbol">, </span><a href="_app_model_link_link_.link.html" class="tsd-signature-type">Link</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> =&nbsp;new EventEmitter()</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in app/model/graph/force-directed-graph.ts:19</li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private">
+					<a name="width" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagPrivate">Private</span> width</h3>
+					<div class="tsd-signature tsd-kind-icon">width<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in app/model/graph/force-directed-graph.ts:28</li>
+						</ul>
+					</aside>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Methods</h2>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-private">
+					<a name="addlinks" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagPrivate">Private</span> add<wbr>Links</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-private">
+						<li class="tsd-signature tsd-kind-icon">add<wbr>Links<span class="tsd-signature-symbol">(</span>links<span class="tsd-signature-symbol">: </span><a href="_app_model_link_link_.link.html" class="tsd-signature-type">Link</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in app/model/graph/force-directed-graph.ts:295</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Adding links to graph.
+									Links are add to active links array and removed from non-active</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>links: <a href="_app_model_link_link_.link.html" class="tsd-signature-type">Link</a><span class="tsd-signature-symbol">[]</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>to be add</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="addsubnetwork" class="tsd-anchor"></a>
+					<h3>add<wbr>Subnetwork</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">add<wbr>Subnetwork<span class="tsd-signature-symbol">(</span>node<span class="tsd-signature-symbol">: </span><a href="_app_model_node_router_node_.routernode.html" class="tsd-signature-type">RouterNode</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in app/model/graph/force-directed-graph.ts:236</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Adding subnetwork of router node to graph-visual (called by Node itself when changing state)</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>node: <a href="_app_model_node_router_node_.routernode.html" class="tsd-signature-type">RouterNode</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>which sub networking is to be added.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-private">
+					<a name="addsubnetworknodes" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagPrivate">Private</span> add<wbr>Subnetwork<wbr>Nodes</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-private">
+						<li class="tsd-signature tsd-kind-icon">add<wbr>Subnetwork<wbr>Nodes<span class="tsd-signature-symbol">(</span>parent<span class="tsd-signature-symbol">: </span><a href="_app_model_node_router_node_.routernode.html" class="tsd-signature-type">RouterNode</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in app/model/graph/force-directed-graph.ts:273</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Adding nodes of subnetwork to graph-visual. Used when revealing subnetwork.
+									Children nodes are add to active nodes and removed from non-active</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>parent: <a href="_app_model_node_router_node_.routernode.html" class="tsd-signature-type">RouterNode</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>node of subnetwork</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-private">
+					<a name="calculatechildxposition" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagPrivate">Private</span> calculate<wbr>ChildXPosition</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-private">
+						<li class="tsd-signature tsd-kind-icon">calculate<wbr>ChildXPosition<span class="tsd-signature-symbol">(</span>parent<span class="tsd-signature-symbol">: </span><a href="_app_model_node_router_node_.routernode.html" class="tsd-signature-type">RouterNode</a>, i<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in app/model/graph/force-directed-graph.ts:387</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Simple algorithm to calculate optimal x coordinate of child node after revealing subnet</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>parent: <a href="_app_model_node_router_node_.routernode.html" class="tsd-signature-type">RouterNode</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>parent node of sub network</p>
+									</div>
+								</li>
+								<li>
+									<h5>i: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>index of child node - can be used for improving calculation of position when multiple
+										children should be revealed (better results than just force collide)</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+							<p>x coordinate of child node</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-private">
+					<a name="calculatechildyposition" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagPrivate">Private</span> calculate<wbr>ChildYPosition</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-private">
+						<li class="tsd-signature tsd-kind-icon">calculate<wbr>ChildYPosition<span class="tsd-signature-symbol">(</span>parent<span class="tsd-signature-symbol">: </span><a href="_app_model_node_router_node_.routernode.html" class="tsd-signature-type">RouterNode</a>, i<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in app/model/graph/force-directed-graph.ts:412</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Simple algorithm to calculate optimal y coordinate of child node after revealing subnet</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>parent: <a href="_app_model_node_router_node_.routernode.html" class="tsd-signature-type">RouterNode</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>parent node of sub network</p>
+									</div>
+								</li>
+								<li>
+									<h5>i: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>index of child node - can be used for improving calculation of position when multiple
+										children should be revealed (better results than just force collide)</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+							<p>y coordinate of child node</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-private">
+					<a name="findsubnetlinkstoadd" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagPrivate">Private</span> find<wbr>Subnet<wbr>Links<wbr>ToAdd</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-private">
+						<li class="tsd-signature tsd-kind-icon">find<wbr>Subnet<wbr>Links<wbr>ToAdd<span class="tsd-signature-symbol">(</span>parent<span class="tsd-signature-symbol">: </span><a href="_app_model_node_router_node_.routernode.html" class="tsd-signature-type">RouterNode</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_app_model_link_link_.link.html" class="tsd-signature-type">Link</a><span class="tsd-signature-symbol">[]</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in app/model/graph/force-directed-graph.ts:366</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Helper method to find all previously deleted links that should be added back to graph-visual after adding new nodes</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>parent: <a href="_app_model_node_router_node_.routernode.html" class="tsd-signature-type">RouterNode</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>parent of nodes which links should be added back to the graph-visual</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="_app_model_link_link_.link.html" class="tsd-signature-type">Link</a><span class="tsd-signature-symbol">[]</span></h4>
+							<p>set of links which were selected to be added back to the graph-visual</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-private">
+					<a name="findsubnetlinkstoremove" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagPrivate">Private</span> find<wbr>Subnet<wbr>Links<wbr>ToRemove</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-private">
+						<li class="tsd-signature tsd-kind-icon">find<wbr>Subnet<wbr>Links<wbr>ToRemove<span class="tsd-signature-symbol">(</span>nodes<span class="tsd-signature-symbol">: </span><a href="_app_model_node_node_.node.html" class="tsd-signature-type">Node</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_app_model_link_link_.link.html" class="tsd-signature-type">Link</a><span class="tsd-signature-symbol">[]</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in app/model/graph/force-directed-graph.ts:350</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Helper method to find all links connected to nodes which are going to be removed</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>nodes: <a href="_app_model_node_node_.node.html" class="tsd-signature-type">Node</a><span class="tsd-signature-symbol">[]</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>set of nodes which links should be removed</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="_app_model_link_link_.link.html" class="tsd-signature-type">Link</a><span class="tsd-signature-symbol">[]</span></h4>
+							<p>set of links which were selected to be removed</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="getgraphheight" class="tsd-anchor"></a>
+					<h3>get<wbr>Graph<wbr>Height</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Graph<wbr>Height<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in app/model/graph/force-directed-graph.ts:109</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="getgraphwidth" class="tsd-anchor"></a>
+					<h3>get<wbr>Graph<wbr>Width</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Graph<wbr>Width<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in app/model/graph/force-directed-graph.ts:105</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-private">
+					<a name="getlargestnodexpositioningraph" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagPrivate">Private</span> get<wbr>Largest<wbr>NodeXPosition<wbr>InGraph</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-private">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Largest<wbr>NodeXPosition<wbr>InGraph<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in app/model/graph/force-directed-graph.ts:446</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Calculates x coordinate of most left-positioned router node in the graph-visual</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+							<p>x coordinate</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-private">
+					<a name="getlargestnodeypositioningraph" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagPrivate">Private</span> get<wbr>Largest<wbr>NodeYPosition<wbr>InGraph</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-private">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Largest<wbr>NodeYPosition<wbr>InGraph<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in app/model/graph/force-directed-graph.ts:434</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Calculates y coordinate of lowest router node in the graph-visual</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+							<p>y coordinate</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="getrouternodes" class="tsd-anchor"></a>
+					<h3>get<wbr>Router<wbr>Nodes</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Router<wbr>Nodes<span class="tsd-signature-symbol">(</span>nodes<span class="tsd-signature-symbol">: </span><a href="_app_model_node_node_.node.html" class="tsd-signature-type">Node</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_app_model_node_router_node_.routernode.html" class="tsd-signature-type">RouterNode</a><span class="tsd-signature-symbol">[]</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in app/model/graph/force-directed-graph.ts:496</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>nodes: <a href="_app_model_node_node_.node.html" class="tsd-signature-type">Node</a><span class="tsd-signature-symbol">[]</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="_app_model_node_router_node_.routernode.html" class="tsd-signature-type">RouterNode</a><span class="tsd-signature-symbol">[]</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="hierarchicallayout" class="tsd-anchor"></a>
+					<h3>hierarchical<wbr>Layout</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">hierarchical<wbr>Layout<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in app/model/graph/force-directed-graph.ts:512</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Reshuffles graph to hierarchical topology. Uses custom forces with pre-calculated x and y positions for each node.</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-private">
+					<a name="initlinks" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagPrivate">Private</span> init<wbr>Links</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-private">
+						<li class="tsd-signature tsd-kind-icon">init<wbr>Links<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in app/model/graph/force-directed-graph.ts:63</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Initializes graph-visual with links provided by upper layers and sets default forces.</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-private">
+					<a name="initnodes" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagPrivate">Private</span> init<wbr>Nodes</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-private">
+						<li class="tsd-signature tsd-kind-icon">init<wbr>Nodes<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in app/model/graph/force-directed-graph.ts:47</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Initializes graph-visual with nodes provided by upper layer.</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="initposition" class="tsd-anchor"></a>
+					<h3>init<wbr>Position</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">init<wbr>Position<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in app/model/graph/force-directed-graph.ts:153</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Forces for default position of graph-visual</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="initsimulation" class="tsd-anchor"></a>
+					<h3>init<wbr>Simulation</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">init<wbr>Simulation<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in app/model/graph/force-directed-graph.ts:92</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Initializes simulation with forces and other parameters. Prepares it for user interaction.</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="onresize" class="tsd-anchor"></a>
+					<h3>on<wbr>Resize</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">on<wbr>Resize<span class="tsd-signature-symbol">(</span>options<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in app/model/graph/force-directed-graph.ts:118</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Applies forces to center graph and updates width and weight in components that are using it</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>options: <span class="tsd-signature-type">any</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>window width and height</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-private">
+					<a name="removelinks" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagPrivate">Private</span> remove<wbr>Links</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-private">
+						<li class="tsd-signature tsd-kind-icon">remove<wbr>Links<span class="tsd-signature-symbol">(</span>links<span class="tsd-signature-symbol">: </span><a href="_app_model_link_link_.link.html" class="tsd-signature-type">Link</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in app/model/graph/force-directed-graph.ts:333</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Removes links from active array and adds them to non-active</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>links: <a href="_app_model_link_link_.link.html" class="tsd-signature-type">Link</a><span class="tsd-signature-symbol">[]</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>set of links to be removed</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="removesubnetwork" class="tsd-anchor"></a>
+					<h3>remove<wbr>Subnetwork</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">remove<wbr>Subnetwork<span class="tsd-signature-symbol">(</span>node<span class="tsd-signature-symbol">: </span><a href="_app_model_node_router_node_.routernode.html" class="tsd-signature-type">RouterNode</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in app/model/graph/force-directed-graph.ts:309</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Removes subnetwork of router node to graph-visual (called by Node itself when changing state)</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>node: <a href="_app_model_node_router_node_.routernode.html" class="tsd-signature-type">RouterNode</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>which sub network is to be removed.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-private">
+					<a name="removesubnetworknodes" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagPrivate">Private</span> remove<wbr>Subnetwork<wbr>Nodes</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-private">
+						<li class="tsd-signature tsd-kind-icon">remove<wbr>Subnetwork<wbr>Nodes<span class="tsd-signature-symbol">(</span>nodes<span class="tsd-signature-symbol">: </span><a href="_app_model_node_node_.node.html" class="tsd-signature-type">Node</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in app/model/graph/force-directed-graph.ts:318</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Removes nodes from active array and adds them to non-active</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>nodes: <a href="_app_model_node_node_.node.html" class="tsd-signature-type">Node</a><span class="tsd-signature-symbol">[]</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>set of nodes to be removed</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-private">
+					<a name="selforganizeandstop" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagPrivate">Private</span> self<wbr>Organize<wbr>And<wbr>Stop</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-private">
+						<li class="tsd-signature tsd-kind-icon">self<wbr>Organize<wbr>And<wbr>Stop<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in app/model/graph/force-directed-graph.ts:168</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Graph is let to reorganize after applying forces and forces are turned off so its static when user interacts with nodes.</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-private">
+					<a name="selforganizesubnetandstop" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagPrivate">Private</span> self<wbr>Organize<wbr>Subnet<wbr>And<wbr>Stop</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-private">
+						<li class="tsd-signature tsd-kind-icon">self<wbr>Organize<wbr>Subnet<wbr>And<wbr>Stop<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in app/model/graph/force-directed-graph.ts:179</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Essentially the same as selfOrganizeAndStop but for subnet opening.
+									Difference is a lower time to organize because this way transitions and animation are smoother</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-private">
+					<a name="setontick" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagPrivate">Private</span> set<wbr>OnTick</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-private">
+						<li class="tsd-signature tsd-kind-icon">set<wbr>OnTick<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in app/model/graph/force-directed-graph.ts:133</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Creates and sets on tick event for d3 simulation</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-private">
+					<a name="subnetlinksforce" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagPrivate">Private</span> subnet<wbr>Links<wbr>Force</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-private">
+						<li class="tsd-signature tsd-kind-icon">subnet<wbr>Links<wbr>Force<span class="tsd-signature-symbol">(</span>links<span class="tsd-signature-symbol">: </span><a href="_app_model_link_link_.link.html" class="tsd-signature-type">Link</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in app/model/graph/force-directed-graph.ts:479</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>This method applies forces to subnet links for better position of revealed host nodes by
+									maintaining link distance between router and hosts</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>links: <a href="_app_model_link_link_.link.html" class="tsd-signature-type">Link</a><span class="tsd-signature-symbol">[]</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>links in new subnet</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-private">
+					<a name="subnetnodesforce" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagPrivate">Private</span> subnet<wbr>Nodes<wbr>Force</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-private">
+						<li class="tsd-signature tsd-kind-icon">subnet<wbr>Nodes<wbr>Force<span class="tsd-signature-symbol">(</span>parent<span class="tsd-signature-symbol">: </span><a href="_app_model_node_router_node_.routernode.html" class="tsd-signature-type">RouterNode</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in app/model/graph/force-directed-graph.ts:458</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>This method applies forces to subnet for better positioning of revealed nodes.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>parent: <a href="_app_model_node_router_node_.routernode.html" class="tsd-signature-type">RouterNode</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>router node which subnet is revealed</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="turnoffforces" class="tsd-anchor"></a>
+					<h3>turn<wbr>Off<wbr>Forces</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">turn<wbr>Off<wbr>Forces<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in app/model/graph/force-directed-graph.ts:186</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-private">
+					<a name="turnoffhierarchicallayoutforces" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagPrivate">Private</span> turn<wbr>Off<wbr>Hierarchical<wbr>Layout<wbr>Forces</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-private">
+						<li class="tsd-signature tsd-kind-icon">turn<wbr>Off<wbr>Hierarchical<wbr>Layout<wbr>Forces<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in app/model/graph/force-directed-graph.ts:217</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-private">
+					<a name="turnoffinitialforces" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagPrivate">Private</span> turn<wbr>Off<wbr>Initial<wbr>Forces</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-private">
+						<li class="tsd-signature tsd-kind-icon">turn<wbr>Off<wbr>Initial<wbr>Forces<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in app/model/graph/force-directed-graph.ts:200</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Turning forces off after reorganization of graph-visual.</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-private">
+					<a name="turnoffresizeforces" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagPrivate">Private</span> turn<wbr>Off<wbr>Resize<wbr>Forces</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-private">
+						<li class="tsd-signature tsd-kind-icon">turn<wbr>Off<wbr>Resize<wbr>Forces<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in app/model/graph/force-directed-graph.ts:225</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-private">
+					<a name="turnoffsubnetrevealforces" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagPrivate">Private</span> turn<wbr>Off<wbr>Subnet<wbr>Reveal<wbr>Forces</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-private">
+						<li class="tsd-signature tsd-kind-icon">turn<wbr>Off<wbr>Subnet<wbr>Reveal<wbr>Forces<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in app/model/graph/force-directed-graph.ts:210</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+			</section>
+		</div>
+		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
+			<nav class="tsd-navigation primary">
+				<ul>
+					<li class="globals  ">
+						<a href="../globals.html"><em>Globals</em></a>
+					</li>
+					<li class="current tsd-kind-external-module">
+						<a href="../modules/_app_model_graph_force_directed_graph_.html">"app/model/graph/force-<wbr>directed-<wbr>graph"</a>
+					</li>
+				</ul>
+			</nav>
+			<nav class="tsd-navigation secondary menu-sticky">
+				<ul class="before-current">
+				</ul>
+				<ul class="current">
+					<li class="current tsd-kind-class tsd-parent-kind-external-module">
+						<a href="_app_model_graph_force_directed_graph_.forcedirectedgraph.html" class="tsd-kind-icon">Force<wbr>Directed<wbr>Graph</a>
+						<ul>
+							<li class=" tsd-kind-constructor tsd-parent-kind-class">
+								<a href="_app_model_graph_force_directed_graph_.forcedirectedgraph.html#constructor" class="tsd-kind-icon">constructor</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private">
+								<a href="_app_model_graph_force_directed_graph_.forcedirectedgraph.html#height" class="tsd-kind-icon">height</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="_app_model_graph_force_directed_graph_.forcedirectedgraph.html#links" class="tsd-kind-icon">links</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="_app_model_graph_force_directed_graph_.forcedirectedgraph.html#nodes" class="tsd-kind-icon">nodes</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private">
+								<a href="_app_model_graph_force_directed_graph_.forcedirectedgraph.html#nonactivelinks" class="tsd-kind-icon">non<wbr>Active<wbr>Links</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private">
+								<a href="_app_model_graph_force_directed_graph_.forcedirectedgraph.html#nonactivenodes" class="tsd-kind-icon">non<wbr>Active<wbr>Nodes</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="_app_model_graph_force_directed_graph_.forcedirectedgraph.html#simulation" class="tsd-kind-icon">simulation</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="_app_model_graph_force_directed_graph_.forcedirectedgraph.html#ticker" class="tsd-kind-icon">ticker</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private">
+								<a href="_app_model_graph_force_directed_graph_.forcedirectedgraph.html#width" class="tsd-kind-icon">width</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-private">
+								<a href="_app_model_graph_force_directed_graph_.forcedirectedgraph.html#addlinks" class="tsd-kind-icon">add<wbr>Links</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="_app_model_graph_force_directed_graph_.forcedirectedgraph.html#addsubnetwork" class="tsd-kind-icon">add<wbr>Subnetwork</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-private">
+								<a href="_app_model_graph_force_directed_graph_.forcedirectedgraph.html#addsubnetworknodes" class="tsd-kind-icon">add<wbr>Subnetwork<wbr>Nodes</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-private">
+								<a href="_app_model_graph_force_directed_graph_.forcedirectedgraph.html#calculatechildxposition" class="tsd-kind-icon">calculate<wbr>ChildXPosition</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-private">
+								<a href="_app_model_graph_force_directed_graph_.forcedirectedgraph.html#calculatechildyposition" class="tsd-kind-icon">calculate<wbr>ChildYPosition</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-private">
+								<a href="_app_model_graph_force_directed_graph_.forcedirectedgraph.html#findsubnetlinkstoadd" class="tsd-kind-icon">find<wbr>Subnet<wbr>Links<wbr>ToAdd</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-private">
+								<a href="_app_model_graph_force_directed_graph_.forcedirectedgraph.html#findsubnetlinkstoremove" class="tsd-kind-icon">find<wbr>Subnet<wbr>Links<wbr>ToRemove</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="_app_model_graph_force_directed_graph_.forcedirectedgraph.html#getgraphheight" class="tsd-kind-icon">get<wbr>Graph<wbr>Height</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="_app_model_graph_force_directed_graph_.forcedirectedgraph.html#getgraphwidth" class="tsd-kind-icon">get<wbr>Graph<wbr>Width</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-private">
+								<a href="_app_model_graph_force_directed_graph_.forcedirectedgraph.html#getlargestnodexpositioningraph" class="tsd-kind-icon">get<wbr>Largest<wbr>NodeXPosition<wbr>InGraph</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-private">
+								<a href="_app_model_graph_force_directed_graph_.forcedirectedgraph.html#getlargestnodeypositioningraph" class="tsd-kind-icon">get<wbr>Largest<wbr>NodeYPosition<wbr>InGraph</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="_app_model_graph_force_directed_graph_.forcedirectedgraph.html#getrouternodes" class="tsd-kind-icon">get<wbr>Router<wbr>Nodes</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="_app_model_graph_force_directed_graph_.forcedirectedgraph.html#hierarchicallayout" class="tsd-kind-icon">hierarchical<wbr>Layout</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-private">
+								<a href="_app_model_graph_force_directed_graph_.forcedirectedgraph.html#initlinks" class="tsd-kind-icon">init<wbr>Links</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-private">
+								<a href="_app_model_graph_force_directed_graph_.forcedirectedgraph.html#initnodes" class="tsd-kind-icon">init<wbr>Nodes</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="_app_model_graph_force_directed_graph_.forcedirectedgraph.html#initposition" class="tsd-kind-icon">init<wbr>Position</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="_app_model_graph_force_directed_graph_.forcedirectedgraph.html#initsimulation" class="tsd-kind-icon">init<wbr>Simulation</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="_app_model_graph_force_directed_graph_.forcedirectedgraph.html#onresize" class="tsd-kind-icon">on<wbr>Resize</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-private">
+								<a href="_app_model_graph_force_directed_graph_.forcedirectedgraph.html#removelinks" class="tsd-kind-icon">remove<wbr>Links</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="_app_model_graph_force_directed_graph_.forcedirectedgraph.html#removesubnetwork" class="tsd-kind-icon">remove<wbr>Subnetwork</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-private">
+								<a href="_app_model_graph_force_directed_graph_.forcedirectedgraph.html#removesubnetworknodes" class="tsd-kind-icon">remove<wbr>Subnetwork<wbr>Nodes</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-private">
+								<a href="_app_model_graph_force_directed_graph_.forcedirectedgraph.html#selforganizeandstop" class="tsd-kind-icon">self<wbr>Organize<wbr>And<wbr>Stop</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-private">
+								<a href="_app_model_graph_force_directed_graph_.forcedirectedgraph.html#selforganizesubnetandstop" class="tsd-kind-icon">self<wbr>Organize<wbr>Subnet<wbr>And<wbr>Stop</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-private">
+								<a href="_app_model_graph_force_directed_graph_.forcedirectedgraph.html#setontick" class="tsd-kind-icon">set<wbr>OnTick</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-private">
+								<a href="_app_model_graph_force_directed_graph_.forcedirectedgraph.html#subnetlinksforce" class="tsd-kind-icon">subnet<wbr>Links<wbr>Force</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-private">
+								<a href="_app_model_graph_force_directed_graph_.forcedirectedgraph.html#subnetnodesforce" class="tsd-kind-icon">subnet<wbr>Nodes<wbr>Force</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="_app_model_graph_force_directed_graph_.forcedirectedgraph.html#turnoffforces" class="tsd-kind-icon">turn<wbr>Off<wbr>Forces</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-private">
+								<a href="_app_model_graph_force_directed_graph_.forcedirectedgraph.html#turnoffhierarchicallayoutforces" class="tsd-kind-icon">turn<wbr>Off<wbr>Hierarchical<wbr>Layout<wbr>Forces</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-private">
+								<a href="_app_model_graph_force_directed_graph_.forcedirectedgraph.html#turnoffinitialforces" class="tsd-kind-icon">turn<wbr>Off<wbr>Initial<wbr>Forces</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-private">
+								<a href="_app_model_graph_force_directed_graph_.forcedirectedgraph.html#turnoffresizeforces" class="tsd-kind-icon">turn<wbr>Off<wbr>Resize<wbr>Forces</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-private">
+								<a href="_app_model_graph_force_directed_graph_.forcedirectedgraph.html#turnoffsubnetrevealforces" class="tsd-kind-icon">turn<wbr>Off<wbr>Subnet<wbr>Reveal<wbr>Forces</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+				<ul class="after-current">
+				</ul>
+			</nav>
+		</div>
+	</div>
+</div>
+<footer class="with-border-bottom">
+	<div class="container">
+		<h2>Legend</h2>
+		<div class="tsd-legend-group">
+			<ul class="tsd-legend">
+				<li class="tsd-kind-module"><span class="tsd-kind-icon">Module</span></li>
+				<li class="tsd-kind-object-literal"><span class="tsd-kind-icon">Object literal</span></li>
+				<li class="tsd-kind-variable"><span class="tsd-kind-icon">Variable</span></li>
+				<li class="tsd-kind-function"><span class="tsd-kind-icon">Function</span></li>
+				<li class="tsd-kind-function tsd-has-type-parameter"><span class="tsd-kind-icon">Function with type parameter</span></li>
+				<li class="tsd-kind-index-signature"><span class="tsd-kind-icon">Index signature</span></li>
+				<li class="tsd-kind-type-alias"><span class="tsd-kind-icon">Type alias</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-enum"><span class="tsd-kind-icon">Enumeration</span></li>
+				<li class="tsd-kind-enum-member"><span class="tsd-kind-icon">Enumeration member</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-enum"><span class="tsd-kind-icon">Property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-enum"><span class="tsd-kind-icon">Method</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-interface"><span class="tsd-kind-icon">Interface</span></li>
+				<li class="tsd-kind-interface tsd-has-type-parameter"><span class="tsd-kind-icon">Interface with type parameter</span></li>
+				<li class="tsd-kind-constructor tsd-parent-kind-interface"><span class="tsd-kind-icon">Constructor</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-interface"><span class="tsd-kind-icon">Property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-interface"><span class="tsd-kind-icon">Method</span></li>
+				<li class="tsd-kind-index-signature tsd-parent-kind-interface"><span class="tsd-kind-icon">Index signature</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-class"><span class="tsd-kind-icon">Class</span></li>
+				<li class="tsd-kind-class tsd-has-type-parameter"><span class="tsd-kind-icon">Class with type parameter</span></li>
+				<li class="tsd-kind-constructor tsd-parent-kind-class"><span class="tsd-kind-icon">Constructor</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-class"><span class="tsd-kind-icon">Property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class"><span class="tsd-kind-icon">Method</span></li>
+				<li class="tsd-kind-accessor tsd-parent-kind-class"><span class="tsd-kind-icon">Accessor</span></li>
+				<li class="tsd-kind-index-signature tsd-parent-kind-class"><span class="tsd-kind-icon">Index signature</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-constructor tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited constructor</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited method</span></li>
+				<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited accessor</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected method</span></li>
+				<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected accessor</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private method</span></li>
+				<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private accessor</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><span class="tsd-kind-icon">Static property</span></li>
+				<li class="tsd-kind-call-signature tsd-parent-kind-class tsd-is-static"><span class="tsd-kind-icon">Static method</span></li>
+			</ul>
+		</div>
+	</div>
+</footer>
+<div class="container tsd-generator">
+	<p>Generated using <a href="http://typedoc.org/" target="_blank">TypeDoc</a></p>
+</div>
+<div class="overlay"></div>
+<script src="../assets/js/main.js"></script>
+<script>if (location.protocol == 'file:') document.write('<script src="../assets/js/search.js"><' + '/script>');</script>
+</body>
+</html>
